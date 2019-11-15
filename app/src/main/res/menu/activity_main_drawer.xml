@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_info"
+            android:title="@string/nav_about_us" />
+
+        <item
+            android:id="@+id/nav_church_songs"
+            android:icon="@drawable/ic_queue_music"
+            android:title="@string/nav_church_songs" />
+        <item
+            android:id="@+id/nav_audio_messages"
+            android:icon="@drawable/ic_audio_messages"
+            android:title="@string/nav_audio_messages" />
+        <item
+            android:id="@+id/nav_video_messages"
+            android:icon="@drawable/ic_icons_messages"
+            android:title="@string/nav_video_sermons" />
+        <item
+            android:id="@+id/nav_articles"
+            android:icon="@drawable/ic_local_library"
+            android:title="@string/nav_articles" />
+
+        <item
+            android:id="@+id/nav_live_service"
+            android:icon="@drawable/ic_live_tv"
+            android:title="@string/nav_live_service" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_message_black"
+            android:title="@string/nav_chat" />
+        <item
+            android:id="@+id/nav_church_units"
+            android:icon="@drawable/ic_join"
+            android:title="@string/nav_church_units" />
+        <item
+            android:id="@+id/nav_locate_church"
+            android:icon="@drawable/ic_location_on"
+            android:title="@string/nav_locate_church" />
+        <item
+            android:id="@+id/nav_givings"
+            android:icon="@drawable/ic_give"
+            android:title="@string/nav_givings" />
+        
+    </group>
+
+    <item android:title="@string/nav_communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_contact_phone_black_24dp"
+                android:title="@string/nav_contact_us" />
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/nav_share" />
+        </menu>
+    </item>
+
+</menu>

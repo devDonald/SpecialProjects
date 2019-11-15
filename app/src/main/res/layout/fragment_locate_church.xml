@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.LocateChurch">
+
+   <LinearLayout
+       android:layout_margin="20dp"
+       android:layout_gravity="center"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+      <Button
+          android:textStyle="bold"
+          android:textColor="@color/red"
+          android:id="@+id/bt_jos_church"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:fontFamily="sans-serif-black"
+          android:background="@drawable/background_yellow"
+          android:text="God-Life Assembly Jos"
+       />
+
+
+      <Button
+          android:textStyle="bold"
+          android:textColor="@color/red"
+          android:id="@+id/bt_zaria_church"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:fontFamily="sans-serif-black"
+          android:background="@drawable/background_yellow"
+          android:text="God-Life Assembly Zaria"
+
+          />
+
+      <!--<Button-->
+          <!--android:textStyle="bold"-->
+          <!--android:textColor="@color/red"-->
+          <!--android:id="@+id/bt_minna_church"-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginTop="16dp"-->
+          <!--android:fontFamily="sans-serif-black"-->
+          <!--android:background="@drawable/background_yellow"-->
+          <!--android:text="God-Life Assembly Minna"-->
+          <!---->
+
+          <!--/>-->
+
+   </LinearLayout>
+
+</ScrollView>

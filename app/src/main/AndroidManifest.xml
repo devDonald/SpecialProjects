@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.godlife.churchapp.godlifeassembly">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gla"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.AddPraiseReport"></activity>
+        <activity android:name=".activities.AddLoveNote" />
+        <activity android:name=".activities.AddServiceSummary" />
+        <activity android:name=".activities.AddArticle" />
+        <activity android:name=".activities.AddNotices" />
+        <activity android:name=".activities.Admin" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity
+            android:name=".activities.ZariaChurchMap"
+            android:label="@string/title_activity_zaria_church_map" />
+        <activity
+            android:name=".live_service.LiveRadio"
+            android:label="Audio Live Streaming"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".live_service.FBLive"
+            android:label="Live Facebook Streaming" />
+        <activity
+            android:name=".live_service.YoutubeLive"
+            android:label="Live Youtube Streaming" />
+        <activity android:name=".activities.DetailsActivity" />
+        <activity android:name=".activities.Notices" />
+        <activity android:name=".activities.ContactUs" />
+        <activity android:name=".activities.Chats" />
+        <activity
+            android:name=".activities.AboutUs"
+            android:label="About The God-Life Assembly" />
+        <activity
+            android:name=".activities.JosChurchMap"
+            android:label="@string/title_activity_church_loation_map" />
+        <activity android:name=".activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.Intro" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <dist:module dist:instant="true" />
+
+</manifest>
