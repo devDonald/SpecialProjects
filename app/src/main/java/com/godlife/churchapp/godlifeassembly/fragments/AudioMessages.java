@@ -55,6 +55,7 @@ public class AudioMessages extends Fragment {
         webView.setWebViewClient(new MyWebViewClient());
 
         String url = "https://pastorchingtok.com/pastor-chingtok/";
+
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         webView.loadUrl(url);

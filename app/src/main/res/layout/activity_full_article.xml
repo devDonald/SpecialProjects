@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FullArticle">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/full_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:id="@+id/full_article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Article Title"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/full_layout1"
+            app:layout_constraintTop_toBottomOf="@id/full_layout1"
+            app:layout_constraintEnd_toEndOf="@id/full_layout1"
+            android:padding="5dp"
+            android:id="@+id/full_article_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@id/full_article_body"
+            app:layout_constraintEnd_toEndOf="@id/full_article_body"
+            app:layout_constraintTop_toBottomOf="@id/full_article_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/article_footer"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/full_article_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posted by"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/full_article_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                />
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/full_article_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -53,7 +53,7 @@
             android:layout_marginTop="16dp"
             android:background="@color/blue"
             android:padding="10dp"
-            android:text="Every  Sunday-9am &amp; Wednesdays- 4:30pm"
+            android:text="Every  Sunday-8am &amp; Wednesdays- 4:30pm"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
@@ -90,17 +90,17 @@
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-        <Button
-            android:id="@+id/bt_audio_stream1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/background_yellow"
-            android:text="Audio Stream"
-            app:layout_constraintEnd_toEndOf="@+id/bt_youtube_video"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="@+id/bt_youtube_video"
-            app:layout_constraintTop_toBottomOf="@+id/bt_youtube_video" />
+<!--        <Button-->
+<!--            android:id="@+id/bt_audio_stream1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:background="@drawable/background_yellow"-->
+<!--            android:text="Audio Stream"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/bt_youtube_video"-->
+<!--            app:layout_constraintHorizontal_bias="0.494"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/bt_youtube_video"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/bt_youtube_video" />-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

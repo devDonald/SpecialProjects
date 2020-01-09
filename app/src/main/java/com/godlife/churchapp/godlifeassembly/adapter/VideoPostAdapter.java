@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.godlife.churchapp.godlifeassembly.R;
 import com.godlife.churchapp.godlifeassembly.interfaces.OnItemClickListener;
 import com.godlife.churchapp.godlifeassembly.models.YoutubeDataModel;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -53,7 +53,7 @@ public class VideoPostAdapter extends RecyclerView.Adapter<VideoPostAdapter.Yout
         holder.bind(dataSet.get(position), listener);
 
         //TODO: image will be downloaded from url
-        Picasso.get().load(object.getThumbnail()).into(ImageThumb);
+        Glide.with(mContext).load(object.getThumbnail()).into(ImageThumb);
 
 
 

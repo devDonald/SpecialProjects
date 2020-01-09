@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.godlife.churchapp.godlifeassembly.R;
 import com.godlife.churchapp.godlifeassembly.models.YoutubeCommentModel;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -43,7 +43,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.YoutubeC
         try {
             if (object.getThumbnail() != null) {
                 if (object.getThumbnail().startsWith("http")) {
-                    Picasso.get()
+                    Glide.with(mContext)
                             .load(object.getThumbnail())
                             .into(imageView);
                 }

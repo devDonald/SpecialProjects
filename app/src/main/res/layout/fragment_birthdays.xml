@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Birthdays">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/birth_january"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_january"
+
+                />
+
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_january"
+                app:layout_constraintEnd_toEndOf="@id/birth_january"
+                app:layout_constraintStart_toStartOf="@id/birth_january"
+                android:id="@+id/birth_february"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_february"
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_february"
+                app:layout_constraintEnd_toEndOf="@id/birth_february"
+                app:layout_constraintStart_toStartOf="@id/birth_february"
+                android:id="@+id/birth_march"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_march"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_march"
+                app:layout_constraintStart_toStartOf="@id/birth_march"
+                app:layout_constraintEnd_toEndOf="@id/birth_march"
+                android:id="@+id/birth_april"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_april"
+
+                />
+
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_april"
+                app:layout_constraintEnd_toEndOf="@id/birth_april"
+                app:layout_constraintStart_toStartOf="@id/birth_april"
+                android:id="@+id/birth_may"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_may"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_may"
+                app:layout_constraintStart_toStartOf="@id/birth_may"
+                app:layout_constraintEnd_toEndOf="@id/birth_may"
+                android:id="@+id/birth_june"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_june"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_june"
+                app:layout_constraintStart_toStartOf="@id/birth_june"
+                app:layout_constraintEnd_toEndOf="@id/birth_june"
+                android:id="@+id/birth_July"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_july"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_July"
+                app:layout_constraintEnd_toEndOf="@id/birth_July"
+                app:layout_constraintStart_toStartOf="@id/birth_July"
+                android:id="@+id/birth_august"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/august"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_august"
+                app:layout_constraintStart_toStartOf="@id/birth_august"
+                app:layout_constraintEnd_toEndOf="@id/birth_august"
+                android:id="@+id/birth_september"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_september"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_september"
+                app:layout_constraintEnd_toEndOf="@id/birth_september"
+                app:layout_constraintStart_toStartOf="@id/birth_september"
+                android:id="@+id/birth_october"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_october"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_october"
+                app:layout_constraintStart_toStartOf="@id/birth_october"
+                app:layout_constraintEnd_toEndOf="@id/birth_october"
+                android:id="@+id/birth_november"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_november"
+
+                />
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/birth_november"
+                app:layout_constraintStart_toStartOf="@id/birth_november"
+                app:layout_constraintStart_toEndOf="@id/birth_november"
+                android:id="@+id/birth_december"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/background_yellow"
+                android:text="@string/text_december"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

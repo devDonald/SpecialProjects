@@ -44,7 +44,7 @@ public class ZariaChurchMap extends FragmentActivity implements OnMapReadyCallba
         mMap = googleMap;
 
         // Add a marker in God-Life Assembly Zaria and move the camera
-        LatLng godlifeZaria = new LatLng(11.144137, 7.683390);
+        LatLng godlifeZaria = new LatLng(11.151198, 7.654623);
         mMap.addMarker(new MarkerOptions().position(godlifeZaria).icon(BitmapDescriptorFactory.fromResource(R.drawable.map_icons)).title("God-Life Assembly Zaria"));
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(godlife));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(godlifeZaria, 16));

@@ -2,21 +2,17 @@
     <string name="app_name">God-Life Assembly</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
     <string name="skip">Skip</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_at">\@</string>
-    <string name="title_activity_join_church">Join Church</string>
     <string name="title_activity_church_loation_map">Map</string>
     <string name="nav_home">Home</string>
     <string name="nav_about_us">About Us</string>
-    <string name="nav_church_songs">Church Songs</string>
+    <string name="nav_church_songs">Lyrics</string>
     <string name="nav_audio_messages">Audio Messages</string>
-    <string name="nav_video_sermons">Video Messages</string>
+    <string name="nav_video_sermons">Videos</string>
     <string name="nav_articles">Articles</string>
     <string name="nav_live_service">Live Service</string>
     <string name="nav_chat">Chat</string>
@@ -25,482 +21,146 @@
     <string name="nav_givings">Givings</string>
     <string name="nav_communicate">Communicate</string>
     <string name="nav_contact_us">Contact Us</string>
-    <string name="nav_join_church">Join Church</string>
     <string name="nav_share">Share</string>
 
     <string name="title_activity_zaria_church_map">Map</string>
+    <string name="text_february">February</string>
+    <string name="text_january">January</string>
+    <string name="text_march">March</string>
+    <string name="text_april">April</string>
+    <string name="text_may">May</string>
+    <string name="text_june">June</string>
+    <string name="text_july">July</string>
+    <string name="august">August</string>
+    <string name="text_september">September</string>
+    <string name="text_october">October</string>
+    <string name="text_november">November</string>
+    <string name="text_december">December</string>
+    <string name="nav_join">Join Church</string>
+    <string name="title_activity_join_church">Join Church</string>
+    <string name="text_love_culture">Our Love Culture</string>
+    <string name="text_assignment">The God-Life Assembly has been called to raise a pure breed of believers, a kingdom minded people divergent in assignments, roles and functions according to the distribution of grace, but unified in destiny pressing onward daily to be conformed to the fullness of the image of the Christ.</string>
+    <string name="love_text_body">Being recipients of God\'s Love, our reasonable and immediate response is to show forth God\'s power through love first to the Brotherhood, then to everyone we encounter </string>
+    <string name="word_text_body">In the Word, we set our gaze intently on the principles of the word of God, beholding and gleaning from
+        the heart of the Father aided by the Holy Spirit until we become just like him with no spot nor wrinkle</string>
 
-    <string-array name="states">
-        <item>Select State</item>
-        <item>Abia</item>
-        <item>Adamawa</item>
-        <item>Anambara</item>
-        <item>Akwa Ibom</item>
-        <item>Bauchi</item>
-        <item>Bayelsa</item>
-        <item>Benue</item>
-        <item>Borno</item>
-        <item>Cross River</item>
-        <item>Delta</item>
-        <item>Ebonyi</item>
+    <string name="accountability_text_body">In accountability, we close in on our ranks because we are accountable first to GOD and then
+        to one another. We build bridges of support and anchors of strength into one another’s lives; we stand through one another’s
+        challenges and battles and we owe the body the responsibility to call one another to order in love and restore those from
+        amongst us that may be overtaken in a fault, taking heed to ourselves knowing that we are products of grace.</string>
+    <string name="worship_text_body">In worship, with bended kneels and open hearts we prostrate before the father, beholding the beauty of his holiness and channeling all the energies of our minds towards him in adoration </string>
+
+    <string name="prayer_text_body">
+        By Christ we offer up Spiritual Sacrifices in prayer, in and out of season, seeking to know the heart of the father and enforcing it on earth
+    </string>
+    <string name="text_hoj">Worship Team (House of Judah)</string>
+    <string name="text_media">Media Team (BETHLEHEM)</string>
+    <string name="text_ushering">Ushering Team</string>
+    <string name="text_protocol">Protocol Team</string>
+    <string name="text_sanctuary">Sanctuary Team</string>
+    <string name="text_agape">Follow-Up Team (Agape)</string>
+    <string name="text_beautification">Beautification Team</string>
+    <string name="text_technical">Technical Team</string>
+    <string name="text_treasury">Treasury Team</string>
+    <string name="text_welfare">Welfare Team</string>
+    <string name="text_scribes">Scribes Team</string>
+    <string name="text_outreach">Outreach Team (Beautiful Feet)</string>
+    <string name="text_prayer">Prayer Team (WatchTower)</string>
+    <string name="text_children">Children\'s Department</string>
+
+    <string-array name="soo">
+        <item>State of Origin</item>
+        <item> Abia</item>
+        <item> Adamawa</item>
+        <item>Akwa Ibom </item>
+        <item>Anambra </item>
+        <item> Bauchi</item>
+        <item> Bayelsa</item>
+        <item> Benue</item>
+        <item>  Borno</item>
+        <item> Cross River</item>
+        <item> Delta</item>
+        <item>  Ebonyi</item>
         <item> Enugu</item>
-        <item> Edo</item>
-        <item> Ekiti</item>
-        <item> Gombe</item>
-        <item> Imo</item>
-        <item> Jigawa</item>
+        <item>Edo </item>
+        <item>Ekiti </item>
+        <item>Gombe </item>
+        <item>Imo</item>
+        <item>Jigawa </item>
         <item> Kaduna</item>
-        <item> Kano</item>
-        <item> Katsina</item>
-        <item> Kebbi</item>
-        <item> Kogi</item>
-        <item> Kwara</item>
-        <item> Lagos</item>
-        <item> Nasarawa</item>
-        <item> Niger</item>
-        <item> Ogun</item>
-        <item> Ondo</item>
-        <item> Osun</item>
-        <item> Oyo</item>
-        <item> Plateau</item>
-        <item> Rivers</item>
-        <item> Sokoto</item>
-        <item> Taraba</item>
-        <item> Yobe</item>
-        <item> Zamfara</item>
+        <item>Kano </item>
+        <item>Katsina </item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nasarawa</item>
+        <item>Niger</item>
+        <item>Ogun </item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers </item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe </item>
+        <item>Zamfara </item>
         <item>FCT</item>
     </string-array>
-    <string-array name="fct_lga">
-        <item>Gwagwalada</item>
-        <item>Kuje</item>
-        <item>Abaji</item>
-        <item>Abuja Municipal</item>
-        <item>Bwari</item>
-        <item>Kwali</item>
-    </string-array>
-    <string-array name="abia_lga">
-        <item>Aba North</item>
-        <item>Aba South</item>
-        <item> Arochukwu</item>
-        <item>Bende</item>
-        <item>Ikwuano</item>
-        <item>Isiala-Ngwa North</item>
-        <item>Isiala-Ngwa South</item>
-        <item>Isuikwato</item>
-        <item>Obi Nwa</item>
-        <item>Ohafia</item>
-        <item>Osisioma</item>
-        <item>Ngwa</item>
-        <item>Ugwunagbo</item>
-        <item>Ukwa East</item>
-        <item>Ukwa West</item>
-        <item>Umuahia North</item>
-        <item>Umuahia South</item>
-        <item>Umu-Neochi</item>
-    </string-array>
-    <string-array name="adamawa_lga">
-        <item>Demsa</item>
-        <item>Fufore</item>
-        <item>Ganaye</item>
-        <item>Gireri</item>
-        <item>Gombi</item>
-        <item>Guyuk</item>
-        <item>Hong</item>
-        <item>Jada</item>
-        <item>Lamurde</item>
-        <item>Madagali</item>
-        <item>Maiha</item>
-        <item>Mayo-Belwa</item>
-        <item>Michika</item>
-        <item>Mubi North</item>
-        <item>Mubi South</item>
-        <item>Numan</item>
-        <item>Shelleng</item>
-        <item>Song</item>
-        <item>Toungo</item>
-        <item>Yola North</item>
-        <item>Yola South</item>
-    </string-array>
 
-    <string-array name="akwa_ibom_lga">
-        <item>Demsa</item>
-        <item>Fufore</item>
-        <item>Ganaye</item>
-        <item>Gireri</item>
-        <item>Gombi</item>
-        <item>Guyuk</item>
-        <item>Hong</item>
-        <item>Jada</item>
-        <item>Lamurde</item>
-        <item>Madagali</item>
-        <item>Maiha</item>
-        <item>Mayo-Belwa</item>
-        <item>Michika</item>
-        <item>Mubi North</item>
-        <item>Mubi South</item>
-        <item>Numan</item>
-        <item>Shelleng</item>
-        <item>Song</item>
-        <item>Toungo</item>
-        <item>Yola North</item>
-        <item>Yola South</item>
-    </string-array>
-    <string-array name="anambara_lga">
-
-        <item>Aguata </item>
-        <item>Anambra East</item>
-        <item>Anambra West</item>
-        <item>Anaocha</item>
-        <item>Awka North</item>
-        <item>Awka South</item>
-        <item>Ayamelum</item>
-        <item> Dunukofia</item>
-        <item> Ekwusigo</item>
-        <item>Idemili North</item>
-        <item> Idemili south</item>
-        <item> Ihiala</item>
-        <item> Njikoka</item>
-        <item>Nnewi North</item>
-        <item>Nnewi South</item>
-        <item>Ogbaru</item>
-        <item>Onitsha North</item>
-        <item>Onitsha South</item>
-        <item> Orumba North</item>
-        <item>Orumba South</item>
-        <item>Oyi</item>
-    </string-array>
-
-    <string-array name="bauchi_lga">
-        <item>Alkaleri</item>
-        <item>Bauchi</item>
-        <item>Bogoro</item>
-        <item>Damban</item>
-        <item>Darazo</item>
-        <item>Dass</item>
-        <item>Ganjuwa</item>
-        <item>Giade</item>
-        <item>Itas/Gadau</item>
-        <item>Jamaare</item>
-        <item>Katagum</item>
-        <item>Kirfi</item>
-        <item>Misau</item>
-        <item>Ningi</item>
-        <item>Shira</item>
-        <item>Tafawa-Balewa</item>
-        <item>Toro</item>
-        <item>Warji</item>
-        <item>Zaki</item>
+    <string-array name="days">
+        <item>DD</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
 
     </string-array>
-    <string-array name="bayelsa_lga">
-        <item> Brass</item>
-        <item>Ekeremor</item>
-        <item>Kolokuma/Opokuma</item>
-        <item>Nembe</item>
-        <item>Ogbia</item>
-        <item>Sagbama</item>
-        <item>Southern Jaw</item>
-        <item>Yenegoa</item>
-    </string-array>
-    <string-array name="benue_lga">
 
-        <item>Ado</item>
-        <item>Agatu</item>
-        <item>Apa</item>
-        <item>Buruku</item>
-        <item>Gboko</item>
-        <item>Guma</item>
-        <item>Gwer East</item>
-        <item> Gwer West</item>
-        <item>Katsina-Ala</item>
-        <item>Konshisha</item>
-        <item>Kwande</item>
-        <item>Logo</item>
-        <item>Makurdi</item>
-        <item>Obi</item>
-        <item>Ogbadibo</item>
-        <item>Oju</item>
-        <item>Okpokwu</item>
-        <item>Ohimini</item>
-        <item>Oturkpo</item>
-        <item>Tarka</item>
-        <item>Ukum</item>
-        <item> Ushongo</item>
-        <item>Vandeikya</item>
-    </string-array>
-    <string-array name="borno_lga">
-        <item>Abadam</item>
-        <item>Askira/Uba</item>
-        <item>Bama</item>
-        <item>Bayo</item>
-        <item>Biu</item>
-        <item>Chibok</item>
-        <item>Damboa</item>
-        <item>Dikwa</item>
-        <item>Gubio</item>
-        <item>Guzamala</item>
-        <item>Gwoza</item>
-        <item> Hawul</item>
-        <item>Jere</item>
-        <item>Kaga</item>
-        <item>Kala/Balge</item>
-        <item>Konduga</item>
-        <item>Kukawa</item>
-        <item>Kwaya Kusar</item>
-        <item>Mafa</item>
-        <item>Magumeri</item>
-        <item>Maiduguri</item>
-        <item>Marte</item>
-        <item>Mobbar</item>
-        <item>Monguno</item>
-        <item> Ngala</item>
-        <item>Nganzai</item>
-        <item>Shani</item>
-    </string-array>
-    <string-array name="cross_river_lga">
-        <item>Akpabuyo</item>
-        <item> Odukpani</item>
-        <item>Akamkpa</item>
-        <item> Biase</item>
-        <item>Abi</item>
-        <item>Ikom</item>
-        <item>Yarkur</item>
-        <item>Odubra</item>
-        <item> Boki</item>
-        <item>Ogoja</item>
-        <item> Yala</item>
-        <item>Obanliku</item>
-        <item>Obudu</item>
-        <item>Calabar South</item>
-        <item>Etung</item>
-        <item>Bekwara</item>
-        <item>Bakassi</item>
-        <item>Calabar Municipality</item>
-    </string-array>
-    <string-array name="delta_lga">
-        <item>Oshimili</item>
-        <item>Aniocha</item>
-        <item>Aniocha South</item>
-        <item>Ika South</item>
-        <item>Ika North-East</item>
-        <item>Ndokwa West</item>
-        <item> Ndokwa East</item>
-        <item>Isoko south</item>
-        <item>Isoko North</item>
-        <item>Bomadi</item>
-        <item>Burutu</item>
-        <item>Ughelli South</item>
-        <item>Ughelli North</item>
-        <item>Ethiope West</item>
-        <item>Ethiope East</item>
-        <item>Sapele</item>
-        <item>Okpe</item>
-        <item>Warri North</item>
-        <item>Warri South</item>
-        <item>Uvwie</item>
-        <item>Udu</item>
-        <item>Warri Central</item>
-        <item>Ukwani</item>
-        <item>Oshimili North</item>
-        <item>Patani</item>
-    </string-array>
-    <string-array name="ebonyi_lga">
-        <item>Afikpo South</item>
-        <item>Afikpo North</item>
-        <item>Onicha</item>
-        <item>Ohaozara</item>
-        <item>Abakaliki</item>
-        <item>Ishielu</item>
-        <item>lkwo</item>
-        <item>Ezza</item>
-        <item>Ezza South</item>
-        <item>Ohaukwu</item>
-        <item>Ebonyi</item>
-        <item>Ivo</item>
-    </string-array>
-
-    <string-array name="edo_lga">
-
-        <item>Esan North-East </item>
-        <item>Esan Central</item>
-        <item>Esan West</item>
-        <item>Egor</item>
-        <item>Ikpoba-West</item>
-        <item>Etsako Central</item>
-        <item>Igueben</item>
-        <item>Oredo</item>
-        <item>Ovia SouthWest</item>
-        <item>Ovia South-East</item>
-        <item>Orhionwon</item>
-        <item>Uhunmwonde</item>
-        <item>Etsako East</item>
-        <item>Esan South-East</item>
-    </string-array>
-    <string-array name="ekiti_lga">
-        <item>Ado </item>
-        <item>Ekiti-East</item>
-        <item>Ekiti-West</item>
-        <item>Emure/Ise/Orun</item>
-        <item> Ekiti South-West</item>
-        <item> Ikare</item>
-        <item>Irepodun</item>
-        <item>Ijero</item>
-        <item>Ido/Osi</item>
-        <item>Oye</item>
-        <item>Ikole</item>
-        <item>Moba</item>
-        <item>Gbonyin</item>
-        <item>Efon</item>
-        <item>Ise/Orun</item>
-        <item>Ilejemeje</item>
+    <string-array name="months">
+        <item>MM</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
 
     </string-array>
-    <string-array name="enugu_lga">
-        <item>Enugu South</item>
-        <item>Igbo-Eze South</item>
-        <item>Enugu North</item>
-        <item>Nkanu</item>
-        <item>Udi Agwu</item>
-        <item>Oji-River</item>
-        <item> Ezeagu</item>
-        <item>IgboEze North</item>
-        <item>Isi-Uzo</item>
-        <item> Nsukka</item>
-        <item>Igbo-Ekiti</item>
-        <item>Uzo-Uwani</item>
-        <item>Enugu East </item>
-        <item>Aninri</item>
-        <item>Nkanu East</item>
-        <item>Udenu</item>
-    </string-array>
 
-    <string-array name="gombe_lga">
-        <item>Akko</item>
-        <item>Balanga</item>
-        <item>Billiri</item>
-        <item>Dukku</item>
-        <item>Kaltungo</item>
-        <item>Kwami</item>
-        <item>Shomgom</item>
-        <item>Funakaye</item>
-        <item>Gombe</item>
-        <item>Nafada/Bajoga</item>
-        <item>Yamaltu/Delta</item>
-    </string-array>
-    <string-array name="imo_lga">
-        <item>Aboh-Mbaise</item>
-        <item>Ahiazu-Mbaise</item>
-        <item>Ehime-Mbano</item>
-        <item>Ezinihitte</item>
-        <item>Ideato North</item>
-        <item>Ideato South</item>
-        <item>Ihitte/Uboma</item>
-        <item>Ikeduru</item>
-        <item>Isiala Mbano</item>
-        <item>Isu</item>
-        <item>Mbaitoli</item>
-        <item>Mbaitoli</item>
-        <item>Ngor-Okpala</item>
-        <item>Njaba</item>
-        <item>Nwangele</item>
-        <item>Nkwerre</item>
-        <item>Obowo</item>
-        <item>Oguta</item>
-        <item>Ohaji/Egbema</item>
-        <item>Okigwe</item>
-        <item>Orlu</item>
-        <item>Orsu</item>
-        <item>Oru East</item>
-        <item>Oru West</item>
-        <item>Owerri-Municipal</item>
-        <item>Owerri North</item>
-        <item>Owerri West</item>
-    </string-array>
-    <string-array name="jigawa_lga">
-        <item>Auyo</item>
-        <item>Babura</item>
-        <item>Birni Kudu</item>
-        <item>Biriniwa</item>
-        <item>Buji</item>
-        <item>Dutse</item>
-        <item>Gagarawa</item>
-        <item>Garki</item>
-        <item>Gumel</item>
-        <item>Guri</item>
-        <item>Gwaram</item>
-        <item>Gwiwa</item>
-        <item>Hadejia</item>
-        <item>Jahun</item>
-        <item>Kafin Hausa</item>
-        <item>Kaugama Kazaure</item>
-        <item>Kiri Kasamma</item>
-        <item>Kiyawa</item>
-        <item>Maigatari</item>
-        <item>Malam Madori</item>
-        <item>Miga</item>
-        <item>Ringim</item>
-        <item>Roni</item>
-        <item>Sule-Tankarkar</item>
-        <item>Taura</item>
-        <item>Yankwashi</item>
-    </string-array>
 
-    <string-array name="kaduna_lga">
-        <item>Birni-Gwari</item>
-        <item>Chikun</item>
-        <item>Giwa</item>
-        <item>Igabi</item>
-        <item>Ikara</item>
-        <item>jaba</item>
-        <item>Jemaa</item>
-        <item>Kachia</item>
-        <item>Kaduna North</item>
-        <item>Kaduna South</item>
-        <item>Kagarko</item>
-        <item>Kajuru</item>
-        <item>Kaura</item>
-        <item>Kauru</item>
-        <item>Kubau</item>
-        <item>Kudan</item>
-        <item>Lere</item>
-        <item> Makarfi</item>
-        <item>Sabon-Gari</item>
-        <item>Sanga</item>
-        <item>Soba</item>
-        <item>Zango-Kataf</item>
-        <item>Zaria</item>
-    </string-array>
-
-    <string-array name="nasarawa_lga">
-        <item>Akwanga </item>
-        <item>Awe</item>
-        <item>Doma</item>
-        <item>Karu</item>
-        <item>Keana</item>
-        <item> Keffi</item>
-        <item>Kokona</item>
-        <item>Lafia</item>
-        <item>Nasarawa</item>
-        <item>Nasarawa-Eggon</item>
-        <item>Obi</item>
-        <item>Toto</item>
-        <item>Wamba</item>
-    </string-array>
-
-    <string-array name="zamfara_lga">
-        <item>Anka</item>
-        <item>Bakura</item>
-        <item>Birnin Magaji/Kiyaw</item>
-        <item>Bukkuyum</item>
-        <item>Bungudu</item>
-        <item>Tsafe</item>
-        <item>Gummi</item>
-        <item>Gusau</item>
-        <item>Kaura Namoda</item>
-        <item>Maradun</item>
-        <item>Maru</item>
-        <item>Shinkafi</item>
-        <item>Talata Mafara</item>
-        <item>Zurmi</item>
-    </string-array>
 </resources>

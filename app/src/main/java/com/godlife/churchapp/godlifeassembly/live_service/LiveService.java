@@ -31,7 +31,7 @@ public class LiveService extends Fragment {
         liveView = inflater.inflate(R.layout.fragment_live, container, false);
 
         youtube_live = liveView.findViewById(R.id.bt_youtube_video);
-        live_radio1 = liveView.findViewById(R.id.bt_audio_stream1);
+//        live_radio1 = liveView.findViewById(R.id.bt_audio_stream1);
 
 
 
@@ -43,13 +43,13 @@ public class LiveService extends Fragment {
             }
         });
 
-        live_radio1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent liveRadio = new Intent(getContext(),LiveRadio.class);
-                startActivity(liveRadio);
-            }
-        });
+//        live_radio1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent liveRadio = new Intent(getContext(),LiveRadio.class);
+//                startActivity(liveRadio);
+//            }
+//        });
 
 
         return liveView;

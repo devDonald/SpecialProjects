@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "319432935338",
+    "firebase_url": "https://god-life-assembly.firebaseio.com",
+    "project_id": "god-life-assembly",
+    "storage_bucket": "god-life-assembly.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319432935338:android:0dde325f9ded7753054dd3",
+        "android_client_info": {
+          "package_name": "com.godlife.churchapp.godlifeassembly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319432935338-pga19dfna1o8n55n28g2tkouenjd7dcq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.godlife.churchapp.godlifeassembly",
+            "certificate_hash": "4bfb6d8ae367e89beec65950408a21d265181621"
+          }
+        },
+        {
+          "client_id": "319432935338-ghlup7sc8rg9ivnb2v8in4dt08c29hi7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX0SIPpI_6vQNOMSmUc8dvRKTskE4Ju1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319432935338-ghlup7sc8rg9ivnb2v8in4dt08c29hi7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

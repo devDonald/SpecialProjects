@@ -19,7 +19,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_marginTop="5dp"
                 android:layout_width="170dp"
-                android:layout_height="200dp"
+                android:layout_height="190dp"
                 android:id="@+id/card_service_summary"
                 app:cardCornerRadius="3dp"
                 app:cardElevation="5dp"
@@ -28,21 +28,31 @@
                 app:layout_constraintEnd_toStartOf="@id/card_lovenotes"
                 >
                 <RelativeLayout
-                    android:background="@android:color/holo_purple"
+                    android:id="@+id/rv_service"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/sevice_image"
+                        android:src="@drawable/service"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@id/tv_service_text"
+                        />
                     <Button
                         android:background="@drawable/border_white"
                         android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
                         android:textColor="@color/red"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tv_service_text"
                         android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:text="Service Summary"/>
+                        android:textSize="16sp"
+                        android:layout_alignParentBottom="true"
+                        android:text="Live Update"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -50,7 +60,7 @@
                 app:cardElevation="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_width="170dp"
-                android:layout_height="200dp"
+                android:layout_height="190dp"
                 android:id="@+id/card_lovenotes"
                 app:cardCornerRadius="3dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -58,20 +68,29 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 >
                 <RelativeLayout
-                    android:background="@color/blue"
+                    android:id="@+id/rv_love"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/love_image"
+                        android:src="@drawable/lovenote"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@id/tv_lovenote_text"
+                        />
                     <Button
                         android:background="@drawable/border_white"
                         android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tv_lovenote_text"
                         android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:text="Love Notes"/>
+                        android:textSize="16sp"
+                        android:layout_alignParentBottom="true"
+                        android:text="Love Note"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -79,7 +98,7 @@
                 app:cardElevation="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_width="170dp"
-                android:layout_height="200dp"
+                android:layout_height="190dp"
                 android:id="@+id/card_praise_report"
                 app:cardCornerRadius="3dp"
                 app:layout_constraintTop_toBottomOf="@id/card_service_summary"
@@ -87,20 +106,29 @@
                 app:layout_constraintEnd_toStartOf="@id/card_upcoming_meetings"
                 >
                 <RelativeLayout
-                    android:background="@color/cardview_dark_background"
+                    android:id="@+id/rv_testimony"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/testiminy_image"
+                        android:src="@drawable/testimony"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@id/tv_praise_report_text"
+                        />
                     <Button
                         android:background="@drawable/border_white"
                         android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tv_praise_report_text"
                         android:textStyle="bold"
                         android:textSize="18sp"
+                        android:layout_alignParentBottom="true"
                         android:text="Praise Report"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -108,7 +136,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_marginTop="5dp"
                 android:layout_width="170dp"
-                android:layout_height="200dp"
+                android:layout_height="190dp"
                 android:id="@+id/card_upcoming_meetings"
                 app:cardCornerRadius="3dp"
                 app:cardElevation="5dp"
@@ -117,26 +145,35 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 >
                 <RelativeLayout
-                    android:background="@color/colorPrimary"
+                    android:id="@+id/rv_events"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/event_image"
+                        android:src="@drawable/up_meetings"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@id/tv_upcoming_text"
+                        />
                     <Button
                         android:background="@drawable/border_white"
                         android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tv_upcoming_text"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
+                        android:layout_alignParentBottom="true"
                         android:text="Upcoming Meetings"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_marginTop="5dp"
                 android:layout_width="170dp"
-                android:layout_height="200dp"
+                android:layout_height="190dp"
                 android:id="@+id/card_articles"
                 app:cardCornerRadius="3dp"
                 app:layout_constraintTop_toBottomOf="@id/card_praise_report"
@@ -144,110 +181,73 @@
                 app:layout_constraintEnd_toStartOf="@id/card_notices"
                 >
                 <RelativeLayout
-                    android:background="@color/colorInfo"
+                    android:id="@+id/rv_articles"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/notices_image"
+                        android:src="@drawable/notices"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@id/tv_notices_text"
+                        />
                     <Button
                         android:background="@drawable/border_white"
                         android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/red"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_articles_text"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:text="Articles"/>
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_marginTop="5dp"
-                android:layout_width="170dp"
-                android:layout_height="200dp"
-                android:id="@+id/card_notices"
-                app:cardCornerRadius="3dp"
-                app:layout_constraintTop_toBottomOf="@id/card_upcoming_meetings"
-                app:layout_constraintStart_toEndOf="@id/card_articles"
-                app:layout_constraintEnd_toEndOf="parent"
-                >
-                <RelativeLayout
-                    android:background="@android:color/holo_blue_bright"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <Button
-                        android:background="@drawable/border_white"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tv_notices_text"
                         android:textStyle="bold"
                         android:textSize="18sp"
+                        android:layout_alignParentBottom="true"
                         android:text="Notices"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_width="170dp"
-                android:layout_height="200dp"
-                android:id="@+id/card_gallery"
+                android:layout_height="190dp"
                 app:cardCornerRadius="3dp"
-                app:layout_constraintTop_toBottomOf="@id/card_articles"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/card_birthdays"
-                >
-                <RelativeLayout
-                    android:background="@color/colorError"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <Button
-                        android:background="@drawable/border_white"
-                        android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/red"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_gallery_text"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:text="Gallery"/>
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_width="170dp"
-                android:layout_height="200dp"
-                android:id="@+id/card_birthdays"
-                app:cardCornerRadius="3dp"
-                app:layout_constraintTop_toBottomOf="@id/card_notices"
-                app:layout_constraintStart_toEndOf="@id/card_gallery"
+                android:id="@+id/card_notices"
+                app:layout_constraintTop_toBottomOf="@id/card_upcoming_meetings"
+                app:layout_constraintStart_toEndOf="@id/card_articles"
                 app:layout_constraintEnd_toEndOf="parent"
                 >
                 <RelativeLayout
-                    android:background="@android:color/holo_green_dark"
+                    android:id="@+id/rv_birthdays"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/notice_image"
+                        android:src="@drawable/birth"
+                        android:layout_alignParentTop="true"
+                        android:layout_above="@id/bt_birthdays_text"
+                        />
+
                     <Button
                         android:background="@drawable/border_white"
                         android:fontFamily="sans-serif-black"
-                        android:layout_centerInParent="true"
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tv_birthdays_text"
+                        android:id="@+id/bt_birthdays_text"
                         android:textStyle="bold"
                         android:textSize="18sp"
+                        android:layout_alignParentBottom="true"
                         android:text="Birthdays"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

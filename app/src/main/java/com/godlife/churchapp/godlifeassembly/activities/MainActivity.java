@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.godlife.churchapp.godlifeassembly.fragments.GivingFragment;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -48,7 +49,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
         //navigationView.setItemBackground(R.drawable.box);
-        getHomeFragment();
+        if (savedInstanceState==null){
+            getHomeFragment();
+
+        }
     }
 
     @Override
@@ -111,7 +115,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_church_songs:
 
                 fragmentClass = ChurchSongs.class;
-                getSupportActionBar().setTitle("Church Songs");
+                getSupportActionBar().setTitle("Lyrics");
                 break;
 
             case R.id.nav_about_us:
@@ -152,13 +156,19 @@ public class MainActivity extends AppCompatActivity
 
             case R.id.nav_givings:
 
-                Intent notices = new Intent(MainActivity.this, Notices.class);
-                startActivity(notices);
+                fragmentClass = GivingFragment.class;
+                getSupportActionBar().setTitle("Give");
                 break;
 
             case R.id.nav_locate_church:
                 fragmentClass = LocateChurch.class;
                 getSupportActionBar().setTitle("Locate Church");
+                break;
+
+            case R.id.nav_contact:
+                Intent toContact = new Intent(MainActivity.this, ContactUs.class);
+                //toContact.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(toContact);
                 break;
 
             case R.id.nav_share:
@@ -209,6 +219,10 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setTitle("Home");
         fragmentTransaction.replace(R.id.frame_layout, home);
         fragmentTransaction.commit();
+    }
+
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
     }
 
 }

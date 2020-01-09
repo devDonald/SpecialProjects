@@ -15,7 +15,7 @@ public class YoutubeLive extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube_live);
 
-        String frameVideo = "<html><body>Youtube Live loading... <br> <iframe width=\"400\" height=\"290\" src=\"https://www.youtube.com/embed/live_stream?channel=UCXTMFK4-CSliIT1tXuRXpkg\" frameborder=\"0\" allowfullscreen=\"true\"></iframe></body></html>";
+        String frameVideo = "<html><body>Youtube Live <br> <iframe width=\"400\" height=\"290\" src=\"https://www.youtube.com/embed/live_stream?channel=UCXTMFK4-CSliIT1tXuRXpkg\" frameborder=\"0\" allowfullscreen=\"true\"></iframe></body></html>";
 
         WebView webView = (WebView)findViewById(R.id.youtube_webview);
         webView.setWebViewClient(new WebViewClient(){

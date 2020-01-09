@@ -1,14 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.ChurchUnits">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/unit_hoj"
+            style="@style/commonUnits"
+            android:layout_marginTop="4dp"
+            android:text="@string/text_hoj"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_hoj"
+            app:layout_constraintEnd_toEndOf="@id/unit_hoj"
+            app:layout_constraintStart_toStartOf="@id/unit_hoj"
+            android:id="@+id/unit_media"
+            style="@style/commonUnits"
+            android:text="@string/text_media"
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_media"
+            app:layout_constraintEnd_toEndOf="@id/unit_media"
+            app:layout_constraintStart_toStartOf="@id/unit_media"
+            android:id="@+id/unit_ushering"
+            style="@style/commonUnits"
+            android:text="@string/text_ushering"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_ushering"
+            app:layout_constraintStart_toStartOf="@id/unit_ushering"
+            app:layout_constraintEnd_toEndOf="@id/unit_ushering"
+            android:id="@+id/unit_protocol"
+            style="@style/commonUnits"
+            android:text="@string/text_protocol"
+
+            />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_protocol"
+            app:layout_constraintEnd_toEndOf="@id/unit_protocol"
+            app:layout_constraintStart_toStartOf="@id/unit_protocol"
+            android:id="@+id/unit_sanctuary"
+            style="@style/commonUnits"
+            android:text="@string/text_sanctuary"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_sanctuary"
+            app:layout_constraintStart_toStartOf="@id/unit_sanctuary"
+            app:layout_constraintEnd_toEndOf="@id/unit_sanctuary"
+            android:id="@+id/unit_agape"
+            style="@style/commonUnits"
+            android:text="@string/text_agape"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_agape"
+            app:layout_constraintStart_toStartOf="@id/unit_agape"
+            app:layout_constraintEnd_toEndOf="@id/unit_agape"
+            android:id="@+id/unit_beautification"
+            style="@style/commonUnits"
+            android:text="@string/text_beautification"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_beautification"
+            app:layout_constraintEnd_toEndOf="@id/unit_beautification"
+            app:layout_constraintStart_toStartOf="@id/unit_beautification"
+            android:id="@+id/unit_technical"
+            style="@style/commonUnits"
+            android:text="@string/text_technical"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_technical"
+            app:layout_constraintStart_toStartOf="@id/unit_technical"
+            app:layout_constraintEnd_toEndOf="@id/unit_technical"
+            android:id="@+id/unit_treasury"
+            style="@style/commonUnits"
+            android:text="@string/text_treasury"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_treasury"
+            app:layout_constraintEnd_toEndOf="@id/unit_treasury"
+            app:layout_constraintStart_toStartOf="@id/unit_treasury"
+            android:id="@+id/unit_welfare"
+            style="@style/commonUnits"
+            android:text="@string/text_welfare"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_welfare"
+            app:layout_constraintStart_toStartOf="@id/unit_welfare"
+            app:layout_constraintEnd_toEndOf="@id/unit_welfare"
+            android:id="@+id/unit_scribes"
+            style="@style/commonUnits"
+            android:text="@string/text_scribes"
+
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_scribes"
+            app:layout_constraintStart_toStartOf="@id/unit_scribes"
+            app:layout_constraintStart_toEndOf="@id/unit_scribes"
+            android:id="@+id/unit_outreach"
+            style="@style/commonUnits"
+            android:text="@string/text_outreach"
+            />
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_scribes"
+            app:layout_constraintStart_toStartOf="@id/unit_scribes"
+            app:layout_constraintStart_toEndOf="@id/unit_scribes"
+            android:id="@+id/unit_prayer"
+            style="@style/commonUnits"
+            android:text="@string/text_prayer"
+            />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/unit_scribes"
+            app:layout_constraintStart_toStartOf="@id/unit_scribes"
+            app:layout_constraintStart_toEndOf="@id/unit_scribes"
+            android:id="@+id/unit_children"
+            style="@style/commonUnits"
+            android:text="@string/text_children"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

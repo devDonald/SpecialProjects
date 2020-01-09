@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:layout_margin="3dp"
+    android:id="@+id/praise_lay"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:src="@drawable/testimony"
+            android:id="@+id/praise_icon"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/praise_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/praise_icon"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:layout_below="@id/praise_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/praise_author_tag"
+            android:text="Given by:"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/praise_icon"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:layout_below="@id/praise_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/praise_author"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/praise_author_tag"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:layout_below="@id/praise_author_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/praise_date_tag"
+            android:text="Date:"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/praise_icon"
+            android:layout_marginStart="10dp"
+            />
+        <TextView
+            android:layout_below="@id/praise_author_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/praise_date"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/praise_date_tag"
+            android:layout_marginStart="10dp"
+            />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
