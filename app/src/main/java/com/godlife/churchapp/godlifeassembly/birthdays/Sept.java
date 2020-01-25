@@ -1,4 +1,4 @@
-package com.godlife.churchapp.godlifeassembly.activities;
+package com.godlife.churchapp.godlifeassembly.birthdays;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,12 +6,11 @@ import android.os.Bundle;
 
 import com.godlife.churchapp.godlifeassembly.R;
 
-public class MonthBirth extends AppCompatActivity {
+public class Sept extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_month_birth);
-        
+        setContentView(R.layout.activity_sept);
     }
 }

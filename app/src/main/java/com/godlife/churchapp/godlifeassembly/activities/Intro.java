@@ -1,7 +1,10 @@
 package com.godlife.churchapp.godlifeassembly.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import androidx.fragment.app.Fragment;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -11,9 +14,25 @@ import com.valdesekamdem.library.mdtoast.MDToast;
 
 public class Intro extends AppIntro2 {
 
+    private String prevStarted = "prevStarted";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        if (!sharedpreferences.getBoolean(prevStarted, false)) {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean(prevStarted, Boolean.TRUE);
+            editor.apply();
+
+
+        } else {
+            Intent mainIntent = new Intent(Intro.this,MainActivity.class);
+            mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(mainIntent);
+            finish();
+        }
         getSupportActionBar().hide();
 
         addSlide(SampleSlide.newInstance(R.layout.intro));

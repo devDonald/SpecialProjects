@@ -15,6 +15,7 @@
     <dist:module dist:instant="true" />
 
     <application
+        android:name=".util.MyApplicationClass"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/gla"
@@ -22,15 +23,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.January"></activity>
-        <activity android:name=".activities.MonthBirth" />
+        <activity android:name=".birthdays.December"></activity>
+        <activity android:name=".birthdays.Nov" />
+        <activity android:name=".birthdays.Oct" />
+        <activity android:name=".birthdays.Sept" />
+        <activity android:name=".birthdays.August" />
+        <activity android:name=".birthdays.July" />
+        <activity android:name=".birthdays.June" />
+        <activity android:name=".birthdays.May" />
+        <activity android:name=".birthdays.April" />
+        <activity android:name=".birthdays.March" />
+        <activity android:name=".birthdays.Feb" />
+        <activity android:name=".birthdays.Jan" />
+        <activity android:name=".activities.FullScreenImage" />
+        <activity android:name=".activities.Login" />
+        <activity android:name=".activities.Register" />
+        <activity android:name=".activities.BirthMonth" />
         <activity
             android:name=".activities.FullMeeting"
             android:label="Upcoming Meeting" />
         <activity
             android:name=".activities.FullNotice"
             android:label="Notices" />
-        <activity android:name=".activities.Register" />
         <activity android:name=".activities.Give" />
         <activity android:name=".activities.FullPraise" />
         <activity android:name=".activities.FullReport" />
@@ -75,6 +89,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Chats"
+            android:label="Chat"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.AboutUs"

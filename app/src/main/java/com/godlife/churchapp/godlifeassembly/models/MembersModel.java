@@ -2,7 +2,8 @@ package com.godlife.churchapp.godlifeassembly.models;
 
 public class MembersModel {
     private String firstName, otherNames, surname, phone, marital, gender, state, country, occupation, address;
-    private String email, DD, MM, photo, uid;
+    private String email, DD, MM, photo, uid, id;
+    private int likes;
 
     public MembersModel() {
     }
@@ -145,5 +146,21 @@ public class MembersModel {
 
     public void setUid(String uid) {
         this.uid = uid;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

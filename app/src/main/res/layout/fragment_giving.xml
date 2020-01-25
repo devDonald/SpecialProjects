@@ -1,17 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.GivingFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="309dp"
-        android:text="Coming Up soon" />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       >
 
-</RelativeLayout>
+       <TextView
+           android:padding="5dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:layout_centerVertical="true"
+           android:textSize="25sp"
+           android:id="@+id/jos_tag"
+           android:textStyle="bold"
+           android:textColor="@color/colorWhite"
+           android:background="@color/colorPrimaryDark"
+           android:text="God-Life Assembly Jos " />
+
+       <TextView
+           android:padding="5dp"
+           android:layout_below="@id/jos_tag"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Project Account"
+           android:id="@+id/project_jos"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:textColor="@color/colorWhite"
+           android:background="@color/colorPrimaryDark"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Acc Name: "
+           android:id="@+id/jos_project_acc_name"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/project_jos"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="God-Life Assembly International"
+           android:id="@+id/jos_project_acc_name1"
+           android:textSize="15sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/project_jos"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           android:layout_toEndOf="@id/jos_project_acc_name"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Account Number: "
+           android:id="@+id/jos_project_acc_no"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/jos_project_acc_name"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="0040255890"
+           android:id="@+id/jos_project_acc_no1"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/jos_project_acc_name"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/jos_project_acc_no"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Bank Name: "
+           android:id="@+id/jp_bank_name"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/jos_project_acc_no"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Diamond Bank (Access)"
+           android:id="@+id/jp_bank_name1"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/jos_project_acc_no"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/jp_bank_name"
+           />
+
+       <TextView
+           android:padding="5dp"
+           android:layout_marginTop="10dp"
+           android:layout_below="@id/jp_bank_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Offering/Tithe Account"
+           android:id="@+id/offtit_jos"
+           android:textSize="18sp"
+           android:textStyle="bold"
+           android:textColor="@color/colorWhite"
+           android:background="@color/colorPrimaryDark"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Acc Name: "
+           android:id="@+id/jofftite_acc_name"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/offtit_jos"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="God-Life Assembly International"
+           android:id="@+id/jofftite_acc_name1"
+           android:textSize="15sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/offtit_jos"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/jofftite_acc_name"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Account Number: "
+           android:id="@+id/jofftite_acc_no"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/jofftite_acc_name"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="0070543521"
+           android:id="@+id/jofftite_acc_no1"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/jofftite_acc_name"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/jofftite_acc_no"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Bank Name: "
+           android:id="@+id/jofftite_bank_name"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/jofftite_acc_no"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Diamond Bank (Access)"
+           android:id="@+id/jofftite_bank_name1"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/jofftite_acc_no"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/jofftite_bank_name"
+           />
+
+
+       <TextView
+           android:padding="5dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="25dp"
+           android:textSize="25sp"
+           android:id="@+id/zaria_tag"
+           android:textStyle="bold"
+           android:textColor="@color/colorWhite"
+           android:background="@color/colorPrimaryDark"
+           android:text="God-Life Assembly Zaria "
+           android:layout_below="@id/jofftite_bank_name"/>
+
+       <TextView
+           android:padding="5dp"
+           android:layout_below="@id/zaria_tag"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Offering/Tithe/Project Account"
+           android:id="@+id/offtit_zaria"
+           android:textSize="18sp"
+           android:textStyle="bold"
+           android:textColor="@color/colorWhite"
+           android:background="@color/colorPrimaryDark"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Acc Name: "
+           android:id="@+id/zofftite_acc_name"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/offtit_zaria"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="God-Life Assembly"
+           android:id="@+id/zofftite_acc_name1"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/offtit_zaria"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/zofftite_acc_name"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Account Number: "
+           android:id="@+id/zofftite_acc_no"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/zofftite_acc_name"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="2026922823"
+           android:id="@+id/zofftite_acc_no1"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/zofftite_acc_name"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/zofftite_acc_no"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Bank Name: "
+           android:id="@+id/zofftite_bank_name"
+           android:textSize="15sp"
+           android:textColor="@color/black"
+           android:layout_below="@id/zofftite_acc_no"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="10dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="First Bank"
+           android:id="@+id/zofftite_bank_name1"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/zofftite_acc_no"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="5dp"
+           android:layout_toEndOf="@id/zofftite_bank_name"
+           />
+
+
+   </RelativeLayout>
+
+</ScrollView>

@@ -1,6 +1,7 @@
 package com.godlife.churchapp.godlifeassembly.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,13 +14,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.godlife.churchapp.godlifeassembly.R;
+import com.godlife.churchapp.godlifeassembly.activities.Chats;
+import com.godlife.churchapp.godlifeassembly.activities.Login;
 import com.godlife.churchapp.godlifeassembly.activities.MainActivity;
+import com.godlife.churchapp.godlifeassembly.live_service.LiveService;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
-    private Button birthdays, notices, service, love,praise, meetings;
+    private Button birthdays, chat, service, videos,audios, live_service;
 
     private View homefragment;
 
@@ -35,17 +39,17 @@ public class HomeFragment extends Fragment {
         homefragment = inflater.inflate(R.layout.fragment_home, container, false);
 
         birthdays = homefragment.findViewById(R.id.bt_birthdays_text);
-        notices = homefragment.findViewById(R.id.tv_notices_text);
+        chat = homefragment.findViewById(R.id.tv_chat);
         service = homefragment.findViewById(R.id.tv_service_text);
-        meetings = homefragment.findViewById(R.id.tv_upcoming_text);
-        love = homefragment.findViewById(R.id.tv_lovenote_text);
-        praise = homefragment.findViewById(R.id.tv_praise_report_text);
+        live_service = homefragment.findViewById(R.id.tv_live_streaming);
+        videos = homefragment.findViewById(R.id.tv_videos_text);
+        audios = homefragment.findViewById(R.id.tv_audio_messages);
 
-        notices.setOnClickListener(new View.OnClickListener() {
+        chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Notices  toNotices = new Notices();
-                addFragment(toNotices);
+                Intent my_profile = new Intent(getContext(), Login.class);
+                startActivity(my_profile);
             }
         });
 
@@ -56,26 +60,26 @@ public class HomeFragment extends Fragment {
                 addFragment(toBirthdays);
             }
         });
-        meetings.setOnClickListener(new View.OnClickListener() {
+        live_service.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ComingMeetings meetings = new ComingMeetings();
+                LiveService meetings = new LiveService();
                 addFragment(meetings);
             }
         });
-        love.setOnClickListener(new View.OnClickListener() {
+        videos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LoveNotes  loveNotes = new LoveNotes();
+                VideoMessages  loveNotes = new VideoMessages();
                 addFragment(loveNotes);
             }
         });
 
-        praise.setOnClickListener(new View.OnClickListener() {
+        audios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PraiseReport praiseReport = new PraiseReport();
-                addFragment(praiseReport);
+                AudioMessages audioMessages = new AudioMessages();
+                addFragment(audioMessages);
             }
         });
 

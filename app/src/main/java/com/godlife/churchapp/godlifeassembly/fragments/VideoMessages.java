@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.godlife.churchapp.godlifeassembly.R;
 import com.godlife.churchapp.godlifeassembly.activities.DetailsActivity;
+import com.godlife.churchapp.godlifeassembly.activities.MainActivity;
 import com.godlife.churchapp.godlifeassembly.adapter.VideoPostAdapter;
 import com.godlife.churchapp.godlifeassembly.interfaces.OnItemClickListener;
 import com.godlife.churchapp.godlifeassembly.models.YoutubeDataModel;
@@ -163,5 +164,14 @@ public class VideoMessages extends Fragment {
         return mList;
 
     }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+
+        ((MainActivity) getActivity()).setActionBarTitle("Videos");
+
+    }
+
 
 }

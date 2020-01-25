@@ -1,12 +1,17 @@
 package com.godlife.churchapp.godlifeassembly.activities;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.godlife.churchapp.godlifeassembly.fragments.ComingMeetings;
 import com.godlife.churchapp.godlifeassembly.fragments.GivingFragment;
+import com.godlife.churchapp.godlifeassembly.fragments.LoveNotes;
+import com.godlife.churchapp.godlifeassembly.fragments.Notices;
+import com.godlife.churchapp.godlifeassembly.fragments.PraiseReport;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,17 +20,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 
 import com.godlife.churchapp.godlifeassembly.BuildConfig;
 import com.godlife.churchapp.godlifeassembly.R;
-import com.godlife.churchapp.godlifeassembly.fragments.AudioMessages;
 import com.godlife.churchapp.godlifeassembly.fragments.ChurchArticles;
 import com.godlife.churchapp.godlifeassembly.fragments.ChurchSongs;
 import com.godlife.churchapp.godlifeassembly.fragments.ChurchUnits;
 import com.godlife.churchapp.godlifeassembly.fragments.HomeFragment;
 import com.godlife.churchapp.godlifeassembly.fragments.LocateChurch;
-import com.godlife.churchapp.godlifeassembly.fragments.VideoMessages;
-import com.godlife.churchapp.godlifeassembly.live_service.LiveService;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,6 +42,9 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        FirebaseMessaging.getInstance().subscribeToTopic("General");
+        FirebaseMessaging.getInstance().subscribeToTopic("Birthdays");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -123,14 +130,17 @@ public class MainActivity extends AppCompatActivity
                 startActivity(my_profile);
                 break;
 
-            case R.id.nav_audio_messages:
-                fragmentClass = AudioMessages.class;
-                getSupportActionBar().setTitle("Audio Messages");
+            case R.id.nav_praise_report:
+                fragmentClass = PraiseReport.class;
+                getSupportActionBar().setTitle("Praise Report");
                 break;
 
-            case R.id.nav_video_messages:
-                fragmentClass = VideoMessages.class;
-                getSupportActionBar().setTitle("Video Messages");
+            case R.id.nav_love_note:
+                fragmentClass = LoveNotes.class;
+                getSupportActionBar().setTitle("Love Notes");
+                break;
+            case R.id.nav_gallery:
+                toGallery();
                 break;
 
             case R.id.nav_articles:
@@ -138,15 +148,15 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle("Church Articles");
                 break;
 
-            case R.id.nav_live_service:
-                fragmentClass = LiveService.class;
-                getSupportActionBar().setTitle("Live Service");
+            case R.id.nav_upcoming:
+                fragmentClass = ComingMeetings.class;
+                getSupportActionBar().setTitle("Upcoming Meetings");
                 break;
 
-            case R.id.nav_chat:
+            case R.id.nav_notices:
 
-                Intent chats = new Intent(MainActivity.this, Chats.class);
-                startActivity(chats);
+                fragmentClass = Notices.class;
+                getSupportActionBar().setTitle("Notices");
                 break;
 
             case R.id.nav_church_units:
@@ -225,4 +235,15 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setTitle(title);
     }
 
+    public void toGallery(){
+        String url = "https://photos.app.goo.gl/XuXxQrqDA43Lpk2c9";
+
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+        boolean canOpen = browserIntent.resolveActivity(getPackageManager()) != null;
+        if (canOpen) {
+            startActivity(browserIntent);
+        }
+
+    }
 }

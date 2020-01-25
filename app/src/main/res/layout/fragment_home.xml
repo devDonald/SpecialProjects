@@ -76,9 +76,9 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:id="@+id/love_image"
-                        android:src="@drawable/lovenote"
+                        android:src="@drawable/ic_video_library"
                         android:layout_alignParentTop="true"
-                        android:layout_above="@id/tv_lovenote_text"
+                        android:layout_above="@id/tv_videos_text"
                         />
                     <Button
                         android:background="@drawable/border_white"
@@ -86,11 +86,11 @@
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tv_lovenote_text"
+                        android:id="@+id/tv_videos_text"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_alignParentBottom="true"
-                        android:text="Love Note"/>
+                        android:text="Videos"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -115,9 +115,9 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:id="@+id/testiminy_image"
-                        android:src="@drawable/testimony"
+                        android:src="@drawable/ic_icons_messages"
                         android:layout_alignParentTop="true"
-                        android:layout_above="@id/tv_praise_report_text"
+                        android:layout_above="@id/tv_audio_messages"
                         />
                     <Button
                         android:background="@drawable/border_white"
@@ -125,11 +125,11 @@
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tv_praise_report_text"
+                        android:id="@+id/tv_audio_messages"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:layout_alignParentBottom="true"
-                        android:text="Praise Report"/>
+                        android:text="AUDIO MESSAGES"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -153,9 +153,9 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:id="@+id/event_image"
-                        android:src="@drawable/up_meetings"
+                        android:src="@drawable/live"
                         android:layout_alignParentTop="true"
-                        android:layout_above="@id/tv_upcoming_text"
+                        android:layout_above="@id/tv_live_streaming"
                         />
                     <Button
                         android:background="@drawable/border_white"
@@ -163,11 +163,11 @@
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tv_upcoming_text"
+                        android:id="@+id/tv_live_streaming"
                         android:textStyle="bold"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:layout_alignParentBottom="true"
-                        android:text="Upcoming Meetings"/>
+                        android:text="Live Streaming"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
@@ -191,9 +191,9 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:id="@+id/notices_image"
-                        android:src="@drawable/notices"
+                        android:src="@drawable/ic_message_black"
                         android:layout_alignParentTop="true"
-                        android:layout_above="@id/tv_notices_text"
+                        android:layout_above="@id/tv_chat"
                         />
                     <Button
                         android:background="@drawable/border_white"
@@ -201,11 +201,11 @@
                         android:textColor="@color/red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tv_notices_text"
+                        android:id="@+id/tv_chat"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:layout_alignParentBottom="true"
-                        android:text="Notices"/>
+                        android:text="Chat"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 

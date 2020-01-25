@@ -16,6 +16,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.godlife.churchapp.godlifeassembly.R;
+import com.godlife.churchapp.godlifeassembly.activities.MainActivity;
 import com.kaopiz.kprogresshud.KProgressHUD;
 
 /**
@@ -107,6 +108,14 @@ public class AudioMessages extends Fragment {
                 hud.dismiss();
             }
         }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+
+        ((MainActivity) getActivity()).setActionBarTitle("Audio Messages");
+
     }
 
 }
