@@ -4,6 +4,7 @@ package com.godlife.churchapp.godlifeassembly.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.godlife.churchapp.godlifeassembly.R;
 import com.godlife.churchapp.godlifeassembly.activities.Chats;
@@ -23,7 +25,8 @@ import com.godlife.churchapp.godlifeassembly.live_service.LiveService;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
-    private Button birthdays, chat, service, videos,audios, live_service;
+    private Button summary, chat, locate, videos,audios, live_service;
+    private RelativeLayout one, two, three, four, five, six;
 
     private View homefragment;
 
@@ -38,12 +41,66 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         homefragment = inflater.inflate(R.layout.fragment_home, container, false);
 
-        birthdays = homefragment.findViewById(R.id.bt_birthdays_text);
+        summary = homefragment.findViewById(R.id.bt_service_summary);
         chat = homefragment.findViewById(R.id.tv_chat);
-        service = homefragment.findViewById(R.id.tv_service_text);
+        locate = homefragment.findViewById(R.id.bt_locate_church);
         live_service = homefragment.findViewById(R.id.tv_live_streaming);
         videos = homefragment.findViewById(R.id.tv_videos_text);
         audios = homefragment.findViewById(R.id.tv_audio_messages);
+
+        one = homefragment.findViewById(R.id.rv_locate_church);
+        two = homefragment.findViewById(R.id.rv_love);
+        three = homefragment.findViewById(R.id.rv_testimony);
+        four = homefragment.findViewById(R.id.rv_events);
+        five = homefragment.findViewById(R.id.rv_articles);
+        six = homefragment.findViewById(R.id.rv_service_summary);
+
+
+        five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent my_profile = new Intent(getContext(), Login.class);
+                startActivity(my_profile);
+            }
+        });
+
+        six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ServiceSummary  toBirthdays = new ServiceSummary();
+                addFragment(toBirthdays);
+            }
+        });
+        four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LiveService meetings = new LiveService();
+                addFragment(meetings);
+            }
+        });
+        two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                VideoMessages  loveNotes = new VideoMessages();
+                addFragment(loveNotes);
+            }
+        });
+
+        three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AudioMessages audioMessages = new AudioMessages();
+                addFragment(audioMessages);
+            }
+        });
+
+        one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LocateChurch  locateChurch = new LocateChurch();
+                addFragment(locateChurch);
+            }
+        });
 
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,10 +110,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        birthdays.setOnClickListener(new View.OnClickListener() {
+        summary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Birthdays  toBirthdays = new Birthdays();
+                ServiceSummary  toBirthdays = new ServiceSummary();
                 addFragment(toBirthdays);
             }
         });
@@ -83,13 +140,14 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        service.setOnClickListener(new View.OnClickListener() {
+        locate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ServiceSummary  summary = new ServiceSummary();
-                addFragment(summary);
+                LocateChurch  locateChurch = new LocateChurch();
+                addFragment(locateChurch);
             }
         });
+
 
         return homefragment;
     }

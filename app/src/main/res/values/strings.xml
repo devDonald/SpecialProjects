@@ -9,7 +9,7 @@
     <string name="title_activity_church_loation_map">Map</string>
     <string name="nav_home">Home</string>
     <string name="nav_about_us">About Us</string>
-    <string name="nav_church_songs">Lyrics</string>
+    <string name="nav_church_lyrics">Lyrics</string>
     <string name="nav_articles">Articles</string>
     <string name="nav_church_units">Church Units</string>
     <string name="nav_locate_church">Locate Church</string>
@@ -32,7 +32,7 @@
     <string name="text_november">November</string>
     <string name="text_december">December</string>
     <string name="text_love_culture">Our Love Culture</string>
-    <string name="text_assignment">The God-Life Assembly has been called to raise a pure breed of believers, a kingdom minded people divergent in assignments, roles and functions according to the distribution of grace, but unified in destiny pressing onward daily to be conformed to the fullness of the image of the Christ.</string>
+    <string name="text_assignment">The God-Life Assembly has been called to raise a pure breed of believers, a kingdom minded people divergent in assignments, roles and functions according to the distribution of grace, but unified in destiny pressing onward daily to be conformed to the fullness of the image of the Christ, a generation who will weary the devil out.</string>
     <string name="love_text_body">Being recipients of God\'s Love, our reasonable and immediate response is to show forth God\'s power through love first to the Brotherhood, then to everyone we encounter </string>
     <string name="word_text_body">In the Word, we set our gaze intently on the principles of the word of God, beholding and gleaning from
         the heart of the Father aided by the Holy Spirit until we become just like him with no spot nor wrinkle</string>
@@ -63,8 +63,14 @@
     <string name="nav_upcoming">Upcoming Meetings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_gallery">Gallery</string>
+    <string name="nav_notices">Notices</string>
+    <string name="nav_love_notes">Love Notes</string>
+    <string name="nav_praise_report">Praise Report</string>
+    <string name="nav_church_songs">Audio Songs</string>
+    <string name="nav_bible">Bible</string>
+    <string name="nav_birthdays">Birthdays</string>
+    <string name="nav_albums">Pastor\'s Albums</string>
 
 
 </resources>

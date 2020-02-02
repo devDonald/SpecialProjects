@@ -26,7 +26,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/lyrics_title"
-            android:text="Lyrics Title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -49,12 +48,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/lyrics_author"
-            android:text="Raymond Ediga"
             android:textStyle="bold|italic"
             android:textColor="@color/black"
             android:textSize="13sp"
             android:layout_toEndOf="@id/lyrics_author_tag"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="3dp"
             />
 
 

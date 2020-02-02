@@ -14,6 +14,8 @@ import android.widget.Button;
 import com.godlife.churchapp.godlifeassembly.R;
 import com.godlife.churchapp.godlifeassembly.activities.BirthMonth;
 import com.godlife.churchapp.godlifeassembly.activities.MainActivity;
+import com.godlife.churchapp.godlifeassembly.birthdays.Jan;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,11 +35,12 @@ public class Birthdays extends Fragment{
         // Inflate the layout for this fragment
        birthView = inflater.inflate(R.layout.fragment_birthdays, container, false);
 
-       first = birthView.findViewById(R.id.birth_january);
-       first.setOnClickListener(new View.OnClickListener() {
+        FirebaseMessaging.getInstance().subscribeToTopic("Birthdays");
+        first = birthView.findViewById(R.id.birth_january);
+        first.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Intent jan = new Intent(getContext(), BirthMonth.class);
+               Intent jan = new Intent(getContext(), Jan.class);
                jan.putExtra("month", "01");
                jan.putExtra("tag","January Birthdays");
                startActivity(jan);
@@ -48,7 +51,7 @@ public class Birthdays extends Fragment{
             @Override
             public void onClick(View view) {
 
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "02");
                 jan.putExtra("tag","February Birthdays");
                 startActivity(jan);
@@ -58,7 +61,7 @@ public class Birthdays extends Fragment{
         third.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "03");
                 jan.putExtra("tag","March Birthdays");
                 startActivity(jan);
@@ -68,7 +71,7 @@ public class Birthdays extends Fragment{
         fourth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "04");
                 jan.putExtra("tag","April Birthdays");
                 startActivity(jan);
@@ -78,7 +81,7 @@ public class Birthdays extends Fragment{
         fifth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "05");
                 jan.putExtra("tag","May Birthdays");
                 startActivity(jan);
@@ -88,7 +91,7 @@ public class Birthdays extends Fragment{
         sixth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "06");
                 jan.putExtra("tag","June Birthdays");
                 startActivity(jan);
@@ -98,7 +101,7 @@ public class Birthdays extends Fragment{
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "07");
                 jan.putExtra("tag","July Birthdays");
                 startActivity(jan);
@@ -108,7 +111,7 @@ public class Birthdays extends Fragment{
         eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "08");
                 jan.putExtra("tag","August Birthdays");
                 startActivity(jan);
@@ -118,7 +121,7 @@ public class Birthdays extends Fragment{
         nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "09");
                 jan.putExtra("tag","September Birthdays");
                 startActivity(jan);
@@ -128,7 +131,7 @@ public class Birthdays extends Fragment{
         ten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "10");
                 jan.putExtra("tag","October Birthdays");
                 startActivity(jan);
@@ -138,7 +141,7 @@ public class Birthdays extends Fragment{
         eleven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "11");
                 jan.putExtra("tag","November Birthdays");
                 startActivity(jan);
@@ -149,7 +152,7 @@ public class Birthdays extends Fragment{
         twelve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jan = new Intent(getContext(), BirthMonth.class);
+                Intent jan = new Intent(getContext(), Jan.class);
                 jan.putExtra("month", "12");
                 jan.putExtra("tag","December Birthdays");
                 startActivity(jan);

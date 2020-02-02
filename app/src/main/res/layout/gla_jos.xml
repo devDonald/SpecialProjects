@@ -63,7 +63,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:text="Sundays - 8am"
+                android:text="Sundays - 9am"
                 android:layout_height="wrap_content"
                 />
             <TextView
@@ -73,7 +73,17 @@
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:text="Wednesdays - 4:30pm"
+                android:text="Tuesdays - 4:30pm"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Thursdays - 4:30pm"
                 android:layout_height="wrap_content"
                 />
             <TextView

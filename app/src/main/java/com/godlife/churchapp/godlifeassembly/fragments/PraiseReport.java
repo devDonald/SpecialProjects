@@ -2,6 +2,7 @@ package com.godlife.churchapp.godlifeassembly.fragments;
 
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -30,9 +31,13 @@ import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -146,19 +151,36 @@ public class PraiseReport extends Fragment {
             @Override
             protected void onBindViewHolder(PraiseViewHolder holder, int position, PraiseModel model) {
                 final PraiseModel note = praiseList.get(position);
+                String todayDate, yesterdayDate;
 
-                Calendar calendar = Calendar.getInstance();
-                SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-                String loveDate= currentDate.format(calendar.getTime());
-
+                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O)
+                {
+                    LocalDate localDate = LocalDate.now();
+                    LocalDate yesterday = LocalDate.now().minusDays(1);
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                    todayDate = localDate.format(formatter);
+                    yesterdayDate = yesterday.format(formatter);
+                }
+                else
+                {
+                    Date c = Calendar.getInstance().getTime();
+                    DateFormat df = SimpleDateFormat.getDateInstance(DateFormat.MEDIUM);
+                    todayDate = df.format(c);
+                    final Calendar cal = Calendar.getInstance();
+                    cal.add(Calendar.DATE, -1);
+                    yesterdayDate=df.format(cal.getTime());
+                }
 
                 holder.title.setText(note.getTitle());
                 holder.author.setText(note.getAuthor());
 
-                if (loveDate.equals(note.getPraiseDate())){
+                if (todayDate.equals(note.getPraiseDate())){
                     holder.date.setText("Today");
-                } else{
-                    holder.author.setText(note.getPraiseDate());
+                }else if (yesterdayDate.equals(note.getPraiseDate())){
+                    holder.date.setText("Yesterday");
+                }
+                else{
+                    holder.date.setText(note.getPraiseDate());
 
                 }
 

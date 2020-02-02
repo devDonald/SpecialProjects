@@ -27,7 +27,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/love_title"
-            android:text="Love Title"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -50,12 +49,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/love_author"
-            android:text="Raymond Ediga"
             android:textStyle="bold|italic"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:layout_toEndOf="@id/love_author_tag"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="2dp"
             />
         <TextView
             android:layout_below="@id/love_author_tag"
@@ -72,12 +70,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/love_date"
-            android:text="12-12-2019"
             android:textStyle="italic"
             android:textColor="@color/black"
             android:textSize="12sp"
             android:layout_toEndOf="@id/love_date_tag"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="2dp"
             />
 
 

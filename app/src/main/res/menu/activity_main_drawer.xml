@@ -12,18 +12,27 @@
             android:id="@+id/nav_about_us"
             android:icon="@drawable/ic_info"
             android:title="@string/nav_about_us" />
+
+        <item
+            android:id="@+id/nav_birthdays"
+            android:icon="@drawable/ic_birthday"
+            android:title="@string/nav_birthdays" />
         <item
             android:id="@+id/nav_church_songs"
-            android:icon="@drawable/ic_queue_music"
+            android:icon="@drawable/ic_audio_songs"
             android:title="@string/nav_church_songs" />
+        <item
+            android:id="@+id/nav_church_lyrics"
+            android:icon="@drawable/ic_queue_music"
+            android:title="@string/nav_church_lyrics" />
         <item
             android:id="@+id/nav_praise_report"
             android:icon="@drawable/ic_praise_report"
-            android:title="Praise Report" />
+            android:title="@string/nav_praise_report" />
         <item
             android:id="@+id/nav_love_note"
             android:icon="@drawable/ic_heart"
-            android:title="Love Notes" />
+            android:title="@string/nav_love_notes" />
         <item
             android:id="@+id/nav_articles"
             android:icon="@drawable/ic_local_library"
@@ -37,15 +46,12 @@
         <item
             android:id="@+id/nav_notices"
             android:icon="@drawable/notices"
-            android:title="Notices" />
+            android:title="@string/nav_notices" />
         <item
             android:id="@+id/nav_church_units"
             android:icon="@drawable/ic_join"
             android:title="@string/nav_church_units" />
-        <item
-            android:id="@+id/nav_locate_church"
-            android:icon="@drawable/ic_location_on"
-            android:title="@string/nav_locate_church" />
+
         <item
             android:id="@+id/nav_givings"
             android:icon="@drawable/ic_give"
@@ -55,6 +61,14 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_gallery"
             android:title="@string/nav_gallery" />
+<!--        <item-->
+<!--            android:id="@+id/nav_albums"-->
+<!--            android:icon="@drawable/ic_albums"-->
+<!--            android:title="@string/nav_albums" />-->
+        <item
+            android:id="@+id/nav_bible"
+            android:icon="@drawable/ic_bible"
+            android:title="@string/nav_bible" />
     </group>
 
     <item android:title="@string/nav_communicate">

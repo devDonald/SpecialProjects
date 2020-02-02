@@ -13,8 +13,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.godlife.churchapp.godlifeassembly.R;
+import com.godlife.churchapp.godlifeassembly.util.MySingleton;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,11 +33,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.Nullable;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.kaopiz.kprogresshud.KProgressHUD;
 import com.valdesekamdem.library.mdtoast.MDToast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -61,7 +72,12 @@ public class Chats extends AppCompatActivity {
     private GlobalMessageAdapter messageAdapter;
     private Uri imageUri = null;
     private KProgressHUD hud;
-    private boolean notify = false;
+    private String TOPIC;
+    final String TAG = "NOTIFICATION TAG";
+
+    final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
+    final private String serverKey = "key=" + "AAAASl-vx6o:APA91bGsBuLzW8VqLaXDFaTd-unc84Ah2BpAHizCg4IPNhfJhPeBQqjWS-8k2RIxtVtBXY3sEH8FINkZifK7t2EKI0AWiWzmQ835Yw7F82jm_L-NZAEZJGixu5bx4F4zyzEaLAHxWCJ8";
+    final private String contentType = "application/json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +97,14 @@ public class Chats extends AppCompatActivity {
 
         setContentView(R.layout.activity_chats);
 
+        FirebaseMessaging.getInstance().unsubscribeFromTopic("Chats");
+
+
         userRef = FirebaseDatabase.getInstance().getReference().child("Users");
         rootRef = FirebaseDatabase.getInstance().getReference().child("Chats");
         filesStorage = FirebaseStorage.getInstance().getReference().child("Files");
+
+        TOPIC = "/topics/Chats";
 
 
        try {
@@ -110,6 +131,7 @@ public class Chats extends AppCompatActivity {
 
             }
         });
+
         hud = KProgressHUD.create(Chats.this)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setLabel("Please wait")
@@ -150,6 +172,7 @@ public class Chats extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendMessage();
+
             }
         });
 //        share_files.setOnClickListener(new View.OnClickListener() {
@@ -173,10 +196,10 @@ public class Chats extends AppCompatActivity {
 
     public void sendMessage(){
         chat_message= emojiconEditText.getText().toString();
-        emojiconEditText.setText(" ");
+
         if (chat_message.isEmpty()){
 
-        } else if(!chat_message.isEmpty()) {
+        } else {
 
             String saveCurrentTime, saveCurrentDate;
 
@@ -201,7 +224,21 @@ public class Chats extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()){
+
+                                JSONObject notification = new JSONObject();
+                                JSONObject notifcationBody = new JSONObject();
+                                try {
+                                    notifcationBody.put("title", "" +sender_name);
+                                    notifcationBody.put("message", chat_message);
+
+                                    notification.put("to", TOPIC);
+                                    notification.put("data", notifcationBody);
+                                } catch (JSONException e) {
+                                    Log.e(TAG, "onCreate: " + e.getMessage());
+                                }
+                                sendNotification(notification);
                                 emojiconEditText.setText(" ");
+
                             }
                         }
                     });
@@ -334,5 +371,40 @@ public class Chats extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    private void sendNotification(JSONObject notification) {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(FCM_API, notification,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.i("Chat Notification", "onResponse: " + response.toString());
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(Chats.this, "Request error", Toast.LENGTH_LONG).show();
+                        Log.i("Chat Notification", "onErrorResponse: Didn't work");
+                    }
+                }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("Authorization", serverKey);
+                params.put("Content-Type", contentType);
+                return params;
+            }
+        };
+        MySingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        FirebaseMessaging.getInstance().subscribeToTopic("Chats");
+
     }
 }

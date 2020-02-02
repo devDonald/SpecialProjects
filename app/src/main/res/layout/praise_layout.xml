@@ -53,7 +53,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             android:layout_toEndOf="@id/praise_author_tag"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="3dp"
             />
         <TextView
             android:layout_below="@id/praise_author_tag"
@@ -74,7 +74,7 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             android:layout_toEndOf="@id/praise_date_tag"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="3dp"
             />
 
 

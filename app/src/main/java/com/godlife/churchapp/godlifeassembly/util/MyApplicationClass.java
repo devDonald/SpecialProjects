@@ -1,7 +1,10 @@
 package com.godlife.churchapp.godlifeassembly.util;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.res.Configuration;
+
+import androidx.multidex.MultiDex;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.FirebaseDatabase;
@@ -36,5 +39,11 @@ public class MyApplicationClass extends Application {
     @Override
     public void onLowMemory() {
         super.onLowMemory();
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 }

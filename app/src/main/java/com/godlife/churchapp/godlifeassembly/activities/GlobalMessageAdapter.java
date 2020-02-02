@@ -92,6 +92,7 @@ public class GlobalMessageAdapter extends RecyclerView.Adapter <GlobalMessageAda
                     //holder.senderLinear.setBackgroundResource(R.drawable.sender_message_layout);
                     holder.senderMessageText.setText(messages.getMessage());
                     holder.senderMessageTime.setText(messages.getTime());
+                    holder.senderName.setText(messages.getNames());
                     if (todayDate.matches(messages.getDate())){
                         holder.senderMessageDate.setText("Today ");
                     } else if (yesterdayDate.matches(messages.getDate())){
@@ -118,11 +119,9 @@ public class GlobalMessageAdapter extends RecyclerView.Adapter <GlobalMessageAda
                     holder.receiverMessageText.setText(messages.getMessage());
                     holder.receiverMessTime.setText(messages.getTime());
                     if (todayDate.matches(messages.getDate())){
-                        holder.senderMessageDate.setText("Today ");
+                        holder.receiverMessageDate.setText("Today ");
                     } else if (yesterdayDate.matches(messages.getDate())){
-                        holder.senderMessageDate.setText("Yesterday ");
-
-
+                        holder.receiverMessageDate.setText("Yesterday ");
                     }
                     else {
                         holder.receiverMessageDate.setText(messages.getDate());
@@ -146,7 +145,7 @@ public class GlobalMessageAdapter extends RecyclerView.Adapter <GlobalMessageAda
 
     public class MessageViewHolder extends RecyclerView.ViewHolder{
         public TextView senderMessageText,receiverMessageText, senderMessageTime, receiverMessTime;
-        public TextView senderMessageDate,receiverMessageDate, receiverName;
+        public TextView senderMessageDate,receiverMessageDate, receiverName, senderName;
         public ImageView senderSentStatus;
         public LinearLayout receiverLinear, senderLinear;
 
@@ -163,6 +162,7 @@ public class GlobalMessageAdapter extends RecyclerView.Adapter <GlobalMessageAda
             senderLinear = itemView.findViewById(R.id.gchat_sender_linear1);
             senderSentStatus = itemView.findViewById(R.id.gsent_status);
             receiverName = itemView.findViewById(R.id.gchat_receiver_name);
+            senderName = itemView.findViewById(R.id.gchat_sender_name);
 
         }
 

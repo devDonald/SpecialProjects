@@ -18,41 +18,48 @@
         android:name=".util.MyApplicationClass"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/gla"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".birthdays.December"></activity>
-        <activity android:name=".birthdays.Nov" />
-        <activity android:name=".birthdays.Oct" />
-        <activity android:name=".birthdays.Sept" />
-        <activity android:name=".birthdays.August" />
-        <activity android:name=".birthdays.July" />
-        <activity android:name=".birthdays.June" />
-        <activity android:name=".birthdays.May" />
-        <activity android:name=".birthdays.April" />
-        <activity android:name=".birthdays.March" />
-        <activity android:name=".birthdays.Feb" />
+        <service
+            android:name=".util.MyFirebaseMessagingService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".birthdays.Jan" />
         <activity android:name=".activities.FullScreenImage" />
-        <activity android:name=".activities.Login" />
-        <activity android:name=".activities.Register" />
+        <activity android:name=".activities.Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.Register"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activities.BirthMonth" />
         <activity
             android:name=".activities.FullMeeting"
-            android:label="Upcoming Meeting" />
+            android:label="Upcoming Meeting"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.FullNotice"
+            android:screenOrientation="portrait"
             android:label="Notices" />
-        <activity android:name=".activities.Give" />
-        <activity android:name=".activities.FullPraise" />
-        <activity android:name=".activities.FullReport" />
+        <activity android:name=".activities.Give"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.FullPraise"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.FullReport"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.FullLove"
+            android:screenOrientation="portrait"
             android:label="Full Love Note" />
         <activity
             android:name=".activities.FullArticle"
+            android:screenOrientation="portrait"
             android:label="Full Article" />
         <activity
             android:name=".activities.FullLyrics"
@@ -89,7 +96,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Chats"
-            android:label="Chat"
+            android:label="General Chat"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.AboutUs"

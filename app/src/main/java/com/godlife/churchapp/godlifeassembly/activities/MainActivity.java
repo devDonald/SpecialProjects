@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.godlife.churchapp.godlifeassembly.fragments.Bible;
+import com.godlife.churchapp.godlifeassembly.fragments.Birthdays;
 import com.godlife.churchapp.godlifeassembly.fragments.ComingMeetings;
 import com.godlife.churchapp.godlifeassembly.fragments.GivingFragment;
 import com.godlife.churchapp.godlifeassembly.fragments.LoveNotes;
@@ -44,8 +46,6 @@ public class MainActivity extends AppCompatActivity
 
 
         FirebaseMessaging.getInstance().subscribeToTopic("General");
-        FirebaseMessaging.getInstance().subscribeToTopic("Birthdays");
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle("Home");
                 break;
 
-            case R.id.nav_church_songs:
+            case R.id.nav_church_lyrics:
 
                 fragmentClass = ChurchSongs.class;
                 getSupportActionBar().setTitle("Lyrics");
@@ -138,6 +138,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_love_note:
                 fragmentClass = LoveNotes.class;
                 getSupportActionBar().setTitle("Love Notes");
+                break;
+            case R.id.nav_bible:
+                fragmentClass = Bible.class;
+                getSupportActionBar().setTitle("Bible");
                 break;
             case R.id.nav_gallery:
                 toGallery();
@@ -163,6 +167,10 @@ public class MainActivity extends AppCompatActivity
                 fragmentClass = ChurchUnits.class;
                 getSupportActionBar().setTitle("Church Units");
                 break;
+            case R.id.nav_birthdays:
+                fragmentClass = Birthdays.class;
+                getSupportActionBar().setTitle("Birthdays");
+                break;
 
             case R.id.nav_givings:
 
@@ -170,9 +178,8 @@ public class MainActivity extends AppCompatActivity
                 getSupportActionBar().setTitle("Give");
                 break;
 
-            case R.id.nav_locate_church:
-                fragmentClass = LocateChurch.class;
-                getSupportActionBar().setTitle("Locate Church");
+            case R.id.nav_church_songs:
+                toChurchSongs();
                 break;
 
             case R.id.nav_contact:
@@ -237,6 +244,20 @@ public class MainActivity extends AppCompatActivity
 
     public void toGallery(){
         String url = "https://photos.app.goo.gl/XuXxQrqDA43Lpk2c9";
+
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+        boolean canOpen = browserIntent.resolveActivity(getPackageManager()) != null;
+        if (canOpen) {
+            startActivity(browserIntent);
+        }
+
+    }
+
+
+
+    public void toChurchSongs(){
+        String url = "http://bit.ly/GLA-Songs";
 
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
 

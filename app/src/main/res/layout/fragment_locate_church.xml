@@ -16,7 +16,7 @@
 
       <Button
           android:textStyle="bold"
-          android:textColor="@color/red"
+          android:textColor="@color/cwhite"
           android:id="@+id/bt_jos_church"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
 
       <Button
           android:textStyle="bold"
-          android:textColor="@color/red"
+          android:textColor="@color/cwhite"
           android:id="@+id/bt_zaria_church"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

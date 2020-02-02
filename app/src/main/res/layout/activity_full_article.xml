@@ -28,10 +28,9 @@
                 android:id="@+id/full_article_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Article Title"
+                android:textSize="21sp"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="22sp"
                 android:textStyle="bold" />
 
 
@@ -49,9 +48,8 @@
             android:id="@+id/full_article_body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="content"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="normal"
             />
 
@@ -66,33 +64,36 @@
             android:orientation="horizontal"
             >
             <TextView
-                android:padding="5dp"
+                android:padding="2dp"
                 android:id="@+id/full_article_by"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Posted by"
                 android:textAlignment="textStart"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <TextView
-                android:padding="5dp"
+                android:padding="2dp"
                 android:id="@+id/full_article_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Author"
                 android:textAlignment="center"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 android:textStyle="bold|italic"
                 />
             <TextView
-                android:padding="5dp"
+                android:padding="2dp"
                 android:id="@+id/full_article_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="date"
                 android:textAlignment="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:textStyle="bold|italic"
                 />
 
