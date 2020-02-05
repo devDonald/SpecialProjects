@@ -13,7 +13,6 @@ import com.godlife.churchapp.godlifeassembly.R;
  * A simple {@link Fragment} subclass.
  */
 public class ChurchUnits extends Fragment {
-    private View church_units_fragment;
 
     public ChurchUnits() {
         // Required empty public constructor
@@ -25,10 +24,8 @@ public class ChurchUnits extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        church_units_fragment = inflater.inflate(R.layout.fragment_church_units, container, false);
 
-
-        return church_units_fragment;
+        return inflater.inflate(R.layout.fragment_church_units, container, false);
     }
 
 }

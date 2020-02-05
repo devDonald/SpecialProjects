@@ -119,23 +119,16 @@
             style="@style/commonUnits"
             android:text="@string/text_outreach"
             />
-        <Button
-            app:layout_constraintTop_toBottomOf="@id/unit_scribes"
-            app:layout_constraintStart_toStartOf="@id/unit_scribes"
-            app:layout_constraintStart_toEndOf="@id/unit_scribes"
-            android:id="@+id/unit_prayer"
-            style="@style/commonUnits"
-            android:text="@string/text_prayer"
-            />
 
         <Button
-            app:layout_constraintTop_toBottomOf="@id/unit_scribes"
-            app:layout_constraintStart_toStartOf="@id/unit_scribes"
-            app:layout_constraintStart_toEndOf="@id/unit_scribes"
+            app:layout_constraintTop_toBottomOf="@id/unit_outreach"
+            app:layout_constraintStart_toStartOf="@id/unit_outreach"
+            app:layout_constraintStart_toEndOf="@id/unit_outreach"
             android:id="@+id/unit_children"
             style="@style/commonUnits"
             android:text="@string/text_children"
             />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

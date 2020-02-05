@@ -30,8 +30,8 @@ import com.valdesekamdem.library.mdtoast.MDToast;
 public class Login extends AppCompatActivity {
 
     private EditText mEtEmail, mEtPassword;
-    private TextView mSignUp,tvReg;
-    private Button signIn;
+    private TextView mSignUp,tvReg, forgot;
+    private Button signIn, back;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     private DatabaseReference users;
@@ -75,73 +75,84 @@ public class Login extends AppCompatActivity {
         mEtPassword = findViewById(R.id.et_login_password);
         signIn = findViewById(R.id.bt_user_login);
         tvReg=findViewById(R.id.tv_register_account);
+        forgot = findViewById(R.id.tv_login_lostpassword);
+        back = findViewById(R.id.lbtn_back);
 
-        tvReg.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent reg = new Intent(Login.this, Register.class);
-                reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(reg);
+                startActivity(new Intent(Login.this, MainActivity.class));
+                finish();
             }
         });
 
-        signIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                email = mEtEmail.getText().toString().trim();
-                password = mEtPassword.getText().toString().trim();
 
-                if (TextUtils.isEmpty(email)||!email.contains("@")||!email.contains(".com")) {
-                    message = "Invalid email address";
-                    mEtEmail.setError(message);
-                    return;
-                }
+        forgot.setOnClickListener(view -> {
+            Intent forgotp = new Intent(Login.this, PasswordReset.class);
+            forgotp.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            forgotp.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(forgotp);
+        });
+        tvReg.setOnClickListener(v -> {
 
-                if (password.length() < 6) {
-                    message = "Minimum password length is 6 digits";
-                    mEtPassword.setError(message);
-                    return;
-                }
-                if (isNetworkAvailable(Login.this)){
-                    try {
-                        hud.show();
-                        mAuth.signInWithEmailAndPassword(email,password)
-                                .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        hud.dismiss();
-                                        if (task.isSuccessful()){
-                                            String current_user = mAuth.getCurrentUser().getUid();
+            Intent reg = new Intent(Login.this, Register.class);
+            reg.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            reg.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(reg);
+        });
 
-                                            MDToast.makeText(Login.this,"Login Successful"
-                                                    ,MDToast.LENGTH_LONG,MDToast.TYPE_SUCCESS).show();
+        signIn.setOnClickListener(view -> {
+            email = mEtEmail.getText().toString().trim();
+            password = mEtPassword.getText().toString().trim();
 
-                                            Intent login = new Intent(Login.this, Chats.class);
-                                            login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                            login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                                            startActivity(login);
-                                            finish();
-
-                                        } else {
-                                            MDToast.makeText(Login.this,"Login Failed, Check email/password"
-                                                    ,MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
-
-                                        }
-                                    }
-                                });
-
-
-                    } catch (Exception e){
-                        e.printStackTrace();
-                    }
-                } else {
-                    MDToast.makeText(Login.this,"Check your network connectivity"
-                            ,MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
-                }
-
+            if (TextUtils.isEmpty(email)||!email.contains("@")||!email.contains(".com")) {
+                message = "Invalid email address";
+                mEtEmail.setError(message);
+                return;
             }
+
+            if (password.length() < 6) {
+                message = "Minimum password length is 6 digits";
+                mEtPassword.setError(message);
+                return;
+            }
+            if (isNetworkAvailable(Login.this)){
+                try {
+                    hud.show();
+                    mAuth.signInWithEmailAndPassword(email,password)
+                            .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    hud.dismiss();
+                                    if (task.isSuccessful()){
+                                        String current_user = mAuth.getCurrentUser().getUid();
+
+                                        MDToast.makeText(Login.this,"Login Successful"
+                                                ,MDToast.LENGTH_LONG,MDToast.TYPE_SUCCESS).show();
+
+                                        Intent login = new Intent(Login.this, Chats.class);
+                                        login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        startActivity(login);
+                                        finish();
+
+                                    } else {
+                                        MDToast.makeText(Login.this,"Login Failed, Check email/password"
+                                                ,MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
+
+                                    }
+                                }
+                            });
+
+
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            } else {
+                MDToast.makeText(Login.this,"Check your network connectivity"
+                        ,MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
+            }
+
         });
 
 

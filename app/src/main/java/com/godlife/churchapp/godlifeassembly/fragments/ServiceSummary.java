@@ -55,6 +55,7 @@ public class ServiceSummary extends Fragment {
     private RecyclerView allSummary_RV;
     private DatabaseReference summaryDb;
     private Context context;
+    private RecyclerView.LayoutManager mLayoutManager;
     private FirebaseRecyclerAdapter<ServiceModel,ServiceViewHolder> firebaseRecyclerAdapter;
 
 
@@ -77,7 +78,7 @@ public class ServiceSummary extends Fragment {
 
         context = getActivity();
 
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+        mLayoutManager = new LinearLayoutManager(getContext());
         allSummary_RV.setLayoutManager(mLayoutManager);
         allSummary_RV.setItemAnimator(new DefaultItemAnimator());
 
@@ -161,9 +162,13 @@ public class ServiceSummary extends Fragment {
                 return viewHolder;
             }
         };
+
+
         allSummary_RV.setAdapter(firebaseRecyclerAdapter);
         firebaseRecyclerAdapter.notifyDataSetChanged();
         allSummary_RV.smoothScrollToPosition(allSummary_RV.getAdapter().getItemCount());
+
+
     }
 
     @Override
@@ -186,6 +191,7 @@ public class ServiceSummary extends Fragment {
     public void onStop() {
         super.onStop();
     }
+
 
 
 }

@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Email Address"
+                android:hint="@string/text_email_address"
                 android:padding="10dp"
                 android:imeOptions="actionNext"
                 android:textSize="15sp"
@@ -46,13 +46,13 @@
             <EditText
                 android:textColorHint="@color/blue"
                 android:textColor="@color/blue"
-                android:drawableRight="@android:drawable/ic_lock_lock"
+                android:drawableEnd="@android:drawable/ic_lock_lock"
                 android:layout_marginTop="20dp"
                 android:layout_below="@id/et_login_email"
                 android:id="@+id/et_login_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="@string/text_password"
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textSize="15sp"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/background_yellow"
                 android:fontFamily="sans-serif-medium"
-                android:text="Login"
+                android:text="@string/text_login"
                 android:textStyle="bold"
                 android:textColor="@color/white" />
 
@@ -83,9 +83,32 @@
                 android:layout_centerVertical="true"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:text="Don't Have an Account yet? Register!"
+                android:text="@string/text_no_account"
                 android:textColor="@color/black"
                 android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tv_login_lostpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_register_account"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/text_forgot_password"
+                android:textColor="@color/black"
+                android:textStyle="bold|italic" />
+            <Button
+                android:id="@+id/lbtn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_login_lostpassword"
+                android:text="@string/btn_back"
+                android:textStyle="bold"
+                android:textColor="@color/blue" />
 
         </RelativeLayout>
 

@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.godlife.churchapp.godlifeassembly.fragments.Bible;
 import com.godlife.churchapp.godlifeassembly.fragments.Birthdays;
 import com.godlife.churchapp.godlifeassembly.fragments.ComingMeetings;
@@ -21,6 +20,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 
@@ -31,11 +31,12 @@ import com.godlife.churchapp.godlifeassembly.fragments.ChurchSongs;
 import com.godlife.churchapp.godlifeassembly.fragments.ChurchUnits;
 import com.godlife.churchapp.godlifeassembly.fragments.HomeFragment;
 import com.godlife.churchapp.godlifeassembly.fragments.LocateChurch;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        try {
+            mAuth = FirebaseAuth.getInstance();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
         FirebaseMessaging.getInstance().subscribeToTopic("General");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -72,27 +79,34 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+        if (mAuth.getCurrentUser()!=null){
+            getMenuInflater().inflate(R.menu.user_menu, menu);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.menu_user_logout) {
+            mAuth.signOut();
+            Intent toLogin = new Intent(MainActivity.this, Login.class);
+            toLogin.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            toLogin.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(toLogin);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

@@ -145,6 +145,7 @@ public class ChurchSongs extends Fragment {
             }
         };
         allLyrics_RV.setAdapter(firebaseRecyclerAdapter);
+        firebaseRecyclerAdapter.notifyDataSetChanged();
     }
 
     @Override

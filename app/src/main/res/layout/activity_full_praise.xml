@@ -38,7 +38,7 @@
 
         </LinearLayout>
 
-        <me.biubiubiu.justifytext.library.JustifyTextView
+        <TextView
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/full_playout1"
             app:layout_constraintTop_toBottomOf="@id/full_playout1"

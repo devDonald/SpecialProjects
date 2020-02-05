@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/description"
-            android:text="Register to Chat/Comment"
+            android:text="@string/register_to_chat_comment"
             app:layout_constraintTop_toBottomOf="@id/reg_chat_logo"
             app:layout_constraintStart_toStartOf="@id/reg_chat_logo"
             app:layout_constraintEnd_toEndOf="@id/reg_chat_logo"
@@ -38,7 +38,7 @@
             android:id="@+id/label_first"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Full Name"
+            android:hint="@string/text_full_name"
             app:layout_constraintTop_toBottomOf="@id/description"
             app:layout_constraintStart_toStartOf="@id/description"
             app:layout_constraintEnd_toEndOf="@id/description"
@@ -60,7 +60,7 @@
             android:id="@+id/label_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/text_email_address"
             app:layout_constraintTop_toBottomOf="@id/label_first"
             app:layout_constraintStart_toStartOf="@id/label_first"
             app:layout_constraintEnd_toEndOf="@id/label_first"
@@ -82,7 +82,7 @@
             android:id="@+id/label_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/text_password"
             app:layout_constraintTop_toBottomOf="@id/label_two"
             app:layout_constraintStart_toStartOf="@id/label_two"
             app:layout_constraintEnd_toEndOf="@id/label_two"
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-20dp"
                 android:padding="10dp"
-                android:text="Password must be greater than 6 characters"
+                android:text="@string/password_text"
                 android:textStyle="italic" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,7 +115,7 @@
             android:id="@+id/label_four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Location"
+            android:hint="@string/text_location"
             app:layout_constraintTop_toBottomOf="@id/label_three"
             app:layout_constraintStart_toStartOf="@id/label_three"
             app:layout_constraintEnd_toEndOf="@id/label_three"
@@ -148,7 +148,7 @@
                 android:padding="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gender:"
+                android:text="@string/text_gender"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="bold"
                 android:id="@+id/gender_select"
@@ -157,7 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/gender_male"
-                android:hint="Male"
+                android:hint="@string/text_male"
                 android:textColorHint="@android:color/holo_blue_dark"
                 />
 
@@ -166,7 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/gender_female"
-                android:hint="Female"
+                android:hint="@string/text_female"
                 />
         </RadioGroup>
         <RadioGroup
@@ -184,7 +184,7 @@
                 android:padding="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Marital Status:"
+                android:text="@string/text_marital_status"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="bold"
                 android:id="@+id/marital_select"
@@ -193,7 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/single"
-                android:hint="Single"
+                android:hint="@string/text_single"
                 android:textColorHint="@android:color/holo_blue_dark"
                 />
 
@@ -202,7 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/married"
-                android:hint="Married"
+                android:hint="@string/text_married"
                 />
 
         </RadioGroup>
@@ -215,11 +215,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:background="@drawable/background_yellow"
-            android:text="Submit"
+            android:text="@string/text_submit"
             app:layout_constraintEnd_toEndOf="@+id/marital_group"
             app:layout_constraintStart_toStartOf="@+id/marital_group"
             app:layout_constraintTop_toBottomOf="@+id/marital_group" />
+
+        <Button
+            android:id="@+id/rbtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:text="@string/btn_back"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/bt_login_sumbmit"
+            app:layout_constraintStart_toStartOf="@+id/bt_login_sumbmit"
+            app:layout_constraintTop_toBottomOf="@+id/bt_login_sumbmit"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

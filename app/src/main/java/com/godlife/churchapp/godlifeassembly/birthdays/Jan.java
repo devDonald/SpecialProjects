@@ -15,6 +15,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.EventLog;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -29,6 +30,7 @@ import com.godlife.churchapp.godlifeassembly.activities.FullLyrics;
 import com.godlife.churchapp.godlifeassembly.fragments.ChurchSongs;
 import com.godlife.churchapp.godlifeassembly.models.LyricsModel;
 import com.godlife.churchapp.godlifeassembly.models.MembersModel;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,16 +38,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Jan extends AppCompatActivity {
     private RecyclerView allMembers_RV;
     private DatabaseReference membersDb;
     private Context context;
     private String month,tag;
-    private int num;
+    //private int num;
     private FirebaseRecyclerAdapter<MembersModel, MembersViewHolder> firebaseRecyclerAdapter;
     private Dialog popDialog;
 
@@ -162,13 +166,12 @@ public class Jan extends AppCompatActivity {
                         }
                     });
 
-                    num = model.getLikes();
+                    int num = model.getLikes();
                     viewHolder.birth_like.setText(""+num);
 
                     viewHolder.birth_like.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-
                             membersDb.child(firebaseRecyclerAdapter.getRef(position).getKey())
                                     .addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
@@ -179,6 +182,11 @@ public class Jan extends AppCompatActivity {
 
                                             Map<String, Object> updates = new HashMap<String,Object>();
                                             updates.put("likes", likes);
+                                            if (FirebaseAuth.getInstance().getCurrentUser()==null){
+
+                                                MDToast.makeText(Jan.this, "You Must Log in at the Chat section to Like a birthday",
+                                                        MDToast.LENGTH_LONG,MDToast.TYPE_INFO).show();
+                                            }
 
                                             membersDb.child(firebaseRecyclerAdapter.getRef(position).getKey()).updateChildren(updates);
 

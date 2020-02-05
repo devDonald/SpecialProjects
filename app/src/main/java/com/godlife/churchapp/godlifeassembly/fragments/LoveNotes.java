@@ -104,7 +104,7 @@ public class LoveNotes extends Fragment {
     }
 
     public static class NoteViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, author, date;
+        public TextView title, author;
 
 
         public NoteViewHolder(View view) {
@@ -112,7 +112,6 @@ public class LoveNotes extends Fragment {
             title = view.findViewById(R.id.love_title);
 
             author = view.findViewById(R.id.love_author);
-            date = view.findViewById(R.id.love_date);
         }
 
 
@@ -152,10 +151,6 @@ public class LoveNotes extends Fragment {
                 String loveDate= currentDate.format(calendar.getTime());
                 holder.title.setText(note.getTitle());
                 holder.author.setText(note.getAuthor());
-
-                if (loveDate.equals(note.getLoveDate())){
-                    holder.date.setText("Today");
-                }
 
 
                 holder.itemView.findViewById(R.id.love_lay).setOnClickListener(new View.OnClickListener() {

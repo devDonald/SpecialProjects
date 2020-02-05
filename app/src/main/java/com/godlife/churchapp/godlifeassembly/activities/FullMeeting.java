@@ -3,12 +3,18 @@ package com.godlife.churchapp.godlifeassembly.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.godlife.churchapp.godlifeassembly.R;
+import com.godlife.churchapp.godlifeassembly.birthdays.Jan;
 import com.godlife.churchapp.godlifeassembly.models.EventsModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,12 +28,15 @@ public class FullMeeting extends AppCompatActivity {
     private TextView tv_title, tv_details;
     private FirebaseFirestore eventsDB;
     private FirebaseFirestoreSettings settings;
+    private Dialog popDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_meeting);
 
+
+        popDialog = new Dialog(FullMeeting.this);
 
         tv_title = findViewById(R.id.full_meet_title);
         tv_details = findViewById(R.id.full_meeting);
@@ -77,4 +86,6 @@ public class FullMeeting extends AppCompatActivity {
         }
 
     }
+
+
 }

@@ -8,8 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <dist:module dist:instant="true" />
@@ -23,6 +21,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.PasswordReset"></activity>
+
         <service
             android:name=".util.MyFirebaseMessagingService"
             android:permission="com.google.android.c2dm.permission.SEND">
@@ -34,33 +34,38 @@
 
         <activity android:name=".birthdays.Jan" />
         <activity android:name=".activities.FullScreenImage" />
-        <activity android:name=".activities.Login"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activities.Register"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Register"
+            android:screenOrientation="portrait" />
         <activity android:name=".activities.BirthMonth" />
         <activity
             android:name=".activities.FullMeeting"
             android:label="Upcoming Meeting"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.FullNotice"
-            android:screenOrientation="portrait"
-            android:label="Notices" />
-        <activity android:name=".activities.Give"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activities.FullPraise"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activities.FullReport"
-            android:screenOrientation="portrait"/>
+            android:label="Notices"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Give"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FullPraise"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FullReport"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.FullLove"
-            android:screenOrientation="portrait"
-            android:label="Full Love Note" />
+            android:label="Full Love Note"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.FullArticle"
-            android:screenOrientation="portrait"
-            android:label="Full Article" />
+            android:label="Full Article"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.FullLyrics"
             android:label="Full Lyrics"
@@ -77,11 +82,6 @@
         <activity
             android:name=".activities.ZariaChurchMap"
             android:label="@string/title_activity_zaria_church_map"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".live_service.LiveRadio"
-            android:label="Audio Live Streaming"
-            android:parentActivityName=".activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".live_service.YoutubeLive"

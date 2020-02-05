@@ -38,7 +38,7 @@
 
         </LinearLayout>
 
-        <me.biubiubiu.justifytext.library.JustifyTextView
+        <TextView
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/full_llayout1"
             app:layout_constraintTop_toBottomOf="@id/full_llayout1"
@@ -58,6 +58,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/full_love_body"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/love_footer"
